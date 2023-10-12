@@ -37,7 +37,7 @@ const quiz = [
 let currentQuestionIndex = 0;
 let score = 0;
 let quizOver = false;
-let timeLeft = 5;
+let timeLeft = 10;
 let timerID = null;
 
 // Adding Event Listener to Start Button
@@ -49,7 +49,7 @@ startBtn.addEventListener('click', ()=> {
 
 // Function to Start Quiz
 const startQuiz = () => {
-    timeLeft = 5;
+    timeLeft = 10;
     timer.style.display = "flex";
     shuffleQuestions();
 }
@@ -128,7 +128,7 @@ const checkAnswer = () => {
         // alert("Wrong answer");
         displayAlert(`Wrong Answer! ${quiz[currentQuestionIndex].answer} is the Correct Answer`);
     }
-    timeLeft = 5;
+    timeLeft = 10;
     currentQuestionIndex++;
     if (currentQuestionIndex < quiz.length) {
         showQuestions();
@@ -170,7 +170,7 @@ const startTimer = () => {
         // if(timeLeft === 0){                                                                  
         //     const confirmUser = confirm("Time Up!!! Do you want to play the quiz again");
         //     if(confirmUser){
-        //         timeLeft = 5;
+        //         timeLeft = 10;
         //         startQuiz();
         //     }
         //     else{
