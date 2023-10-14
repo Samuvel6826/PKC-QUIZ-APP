@@ -48,13 +48,6 @@ body {
     display: none;
 }
 
-.container h1 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    text-decoration: underline;
-    text-underline-offset: 8px;
-}
-
 .container .question {
     font-size: 26px;
     margin-top: 20px;
@@ -62,6 +55,15 @@ body {
 
 .container .choices {
     margin-top: 20px;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    gap: 10px 40px;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .choice {
@@ -105,8 +107,8 @@ body {
     text-align: center;
 }
 
-.btn:hover{
-    background-color: #08780c;
+button:hover{
+    cursor: pointer;
 }
 
 .scoreCard{
@@ -146,6 +148,12 @@ body {
     justify-content: center;
     align-items: center;
     animation: pulse 1s ease-in-out infinite;
+}
+
+.timerBtn {
+    font-size: 2rem;
+    padding: 5px;
+    border-radius: 15px;
 }
 
 /* Adding Animation to Timer */

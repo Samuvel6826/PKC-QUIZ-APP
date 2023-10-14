@@ -13,22 +13,22 @@ const timer = document.querySelector('.timer');
 const quiz = [
     {
         question: "Which of the following is not a CSS box model property?",
-        choices: ["margin", "padding", "border-radius", "border-collapse"],
+        choices: ["A. margin", "B. padding", "C. border-radius", "D. border-collapse"],
         answer: "border-collapse"
     },
     {
         question: "Which of the following is not a valid way to declare a function in JavaScript?",
-        choices: ["function myFunction() {}", " let myFunction = function() {};", "myFunction: function() {}", "const myFunction = () => {};"],
+        choices: ["A. function myFunction() {}", "B. let myFunction = function() {};", "C. myFunction: function() {}", "D. const myFunction = () => {};"],
         answer: "myFunction: function() {}"
     },
     {
         question: "Which of the following is not a JavaScript data type?",
-        choices: ["string", "boolean", "object", "float"],
+        choices: ["A. string", "B. boolean", "C. object", "D. float"],
         answer: "float"
     },
     {
         question: "What is the purpose of the this keyword in JavaScript?",
-        choices: ["It refers to the current function.", "It refers to the current object.", "It refers to the parent object.", " It is used for comments."],
+        choices: ["A. It refers to the current function.", "B. It refers to the current object.", "C. It refers to the parent object.", "D. It is used for comments."],
         answer: "It refers to the current object."
     }
 ];
@@ -83,7 +83,7 @@ const showQuestions = () => {
             }
             else {
                 choiceDiv.classList.add('selected');
-                    const selectedChoice = document.querySelector('.choice.selected');           // SAM
+                    const selectedChoice = document.querySelector('.choice.selected');                         // SAM
                     if (selectedChoice) {
                         checkAnswer()
                     }
@@ -91,9 +91,9 @@ const showQuestions = () => {
         });
     }
     
-    if(currentQuestionIndex < quiz.length){
-        startTimer();
-    }
+    // if(currentQuestionIndex < quiz.length){                                                                 // SAM
+    //     startTimer();
+    // }
 }
 
 nextBtn.addEventListener('click', () => {
@@ -160,11 +160,11 @@ const showScore = () => {
 }
 
 // Function to Start Timer
-const startTimer = () => {
+function startTimer() {
     clearInterval(timerID); // Check for any exist timers
     timer.textContent = timeLeft;
 
-    const countDown = ()=>{
+    function countDown() {
         timeLeft--;
         timer.textContent = timeLeft;
         // if(timeLeft === 0){                                                                  
@@ -179,11 +179,10 @@ const startTimer = () => {
         //         return;
         //     }
         // }
-
-            if (timeLeft === 0) {  
-                stopTimer()    // SAM 
-                displayAlert("Timeout!")       
-            }
+        if (timeLeft === 0) {
+            stopTimer();                                                            // SAM 
+            displayAlert("Timeout!");
+        }
 
     }
     timerID = setInterval(countDown, 1000);
