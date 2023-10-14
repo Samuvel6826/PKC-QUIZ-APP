@@ -2,6 +2,7 @@ const container = document.querySelector('.container');
 const questionBox = document.querySelector('.question');
 const choicesBox = document.querySelector('.choices');
 const nextBtn = document.querySelector('.nextBtn');
+nextBtn.style.display = "none";
 const scoreCard = document.querySelector('.scoreCard');
 const alert = document.querySelector('.alert');
 const startBtn = document.querySelector('.startBtn');
@@ -43,6 +44,7 @@ let timerID = null;
 // Adding Event Listener to Start Button
 startBtn.addEventListener('click', ()=> {
     startBtn.style.display = "none";
+    nextBtn.style.display = "flex";
     container.style.display = "block";
     startQuiz();
 });
