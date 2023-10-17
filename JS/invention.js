@@ -219,7 +219,7 @@ nextBtn.addEventListener('click', () => {
         return;
     }
     if (quizOver) {
-        window.location.href = "/Rules HTML/abbreviation rules.html"  // REDIRECT
+        window.location.href = "../Rules HTML/abbreviation rules.html"  // REDIRECT
     }
     else {
         checkAnswer();
