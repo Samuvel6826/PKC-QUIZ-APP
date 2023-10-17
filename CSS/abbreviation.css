@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right bottom, #08203e, #557c93);
+    display: grid;
+    color: #fff;
+    place-items: center;
+}
+
+#cover {
+    height: 650px;
+    width: 80%;
+}
+
+#quiz-container {
+    height: 500px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.heading {
+    margin-top: 20px;
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #2c00cc 0%,
+     #5a00ba 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: block;
+    font-size: 50px;
+    text-align: center;
+
+ }
+ @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+.startBtnBox {
+    position: absolute;
+    bottom: 50%;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startBtn {
+    text-align: center;
+    height: 100px;
+    width: 150px;
+    border-radius: 100%;
+    
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 850px;
+    padding: 30px;
+    text-align: center;
+    display: none;
+    margin: auto;
+}
+
+.container .question {
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.container .choices {
+    margin-top: 20px;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(2,75%);
+    gap: 10px 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice {
+    font-size: 20px;
+    background-color: #eee;
+    color: #000;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    display: grid;
+    align-items: center;
+    width: 75%;
+    height: 75px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(50%);
+    animation: fade-in 0.5s ease forwards;
+}
+
+.choice:hover{
+    background-color: #ddd;
+}
+
+.choice.selected{
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* .btn{
+    width: 60%;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 12px 20px;
+    margin: 20px auto 0 auto;
+    background-color: #006400;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+} */
+
+button:hover{
+    cursor: pointer;
+}
+
+.scoreCard{
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.alert{
+    font-size: 4rem;
+    display: grid;
+    height: 100%;
+    place-items:  center; 
+}
+
+#alert-container {
+    background-color: #5d9b63;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    padding: 12px;
+    position: absolute;
+    top: 50;
+    display: none;
+}
+
+.nextBtn{
+    width: 15%;
+    position: absolute;
+    bottom: 75px;
+    right: 30px;
+}
+
+.timer{
+    position: absolute;
+    right: 0;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #08203e;
+    border: 2px solid #f00;
+    font-size: 35px;
+    font-weight: 600;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Adding Animation to Timer */
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* Adding Animation to choices */
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:900px){
+    .container {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .container h1{
+        font-size: 24px;
+    }
+    .container .question{
+        font-size: 22px;
+    }
+
+    .timer{
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .startBtn{
+        width: 50%;
+    }
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: xx-large;
+    justify-content: center;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
