@@ -9,6 +9,8 @@ const alertBox = document.querySelector("#alert-container")
 const startBtn = document.querySelector('.startBtn');
 const timer = document.querySelector('.timer');
 timer.style.display = "none";
+const correct = document.querySelector("#correct")
+const wrong = document.querySelector("#wrong")
 
 
 
@@ -233,11 +235,13 @@ const checkAnswer = () => {
     if (selectedChoice.textContent === quiz[currentQuestionIndex].answer) {
         // alert("Correct Answer!");       
         displayAlert("Correct Answer!");
+        correct.play()
         score++;
     }
     else {
         // alert("Wrong answer");                                                                                   
         displayAlert(`Wrong Answer! ${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+        wrong.play()
     }
     timeLeft = 15;
     currentQuestionIndex++;
@@ -278,18 +282,6 @@ function startTimer() {
     function countDown() {
         timeLeft--;
         timer.textContent = timeLeft;
-        // if(timeLeft === 0){                                                                  
-        //     const confirmUser = confirm("Time Up!!! Do you want to play the quiz again");
-        //     if(confirmUser){
-        //         timeLeft = 15;
-        //         startQuiz();
-        //     }
-        //     else{
-        //         startBtn.style.display = "block";
-        //         container.style.display = "none";
-        //         return;
-        //     }
-        // }
         if (timeLeft === 0) {
             stopTimer();                                                            // SAM 
             displayAlert("Timeout!");
