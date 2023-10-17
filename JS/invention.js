@@ -179,16 +179,6 @@ const startQuiz = () => {
     showQuestions();
 }
 
-// Function to shuffle question
-// const shuffleQuestions = () =>{
-//     for(let i=quiz.length-1; i>0; i--){
-//         const j = Math.floor(Math.random() * (i+1));
-//         [quiz[i], quiz[j]] = [quiz[j], quiz[i]];
-//     }
-//     currentQuestionIndex = 0;
-//     showQuestions();
-// }
-
 // Arrow Function to Show Questions
 const showQuestions = () => {
     const questionDetails = quiz[currentQuestionIndex];
@@ -229,13 +219,6 @@ nextBtn.addEventListener('click', () => {
         return;
     }
     if (quizOver) {
-        // nextBtn.textContent = "Next";
-        // scoreCard.textContent = "";
-        // currentQuestionIndex = 0;
-        // quizOver = false;
-        // score = 0;
-        // startQuiz();
-
         window.location.href = "/Rules HTML/abbreviation rules.html"  // REDIRECT
     }
     else {
@@ -313,7 +296,7 @@ function startTimer() {
         }
 
     }
-    timerID = setInterval(countDown, 1500);
+    timerID = setInterval(countDown, 1000);
 }
 
 // Function to Stop Timer

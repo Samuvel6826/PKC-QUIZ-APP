@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapid Rules</title>
+    <link rel="stylesheet" href="../CSS/rapid.css">
 </head>
 <body>
     <h1 style="font-size: 4rem;">Rapid Fire Round Instructions</h1>
@@ -12,7 +13,17 @@
         2. Five questions will be displayed one by one. You just correct order within 15 seconds <br>
         3. Each answer carries 1 mark totally 5 marks.
     </div>
-    <a href="../HTML/rapidfire.html">7. Rapid Fire Round</a>
+
+    <div id="btnBox">
+        <button class="btn glow-on-hover playBtn" onclick="nxtPage()">Let's Play</button>
+    </div>
+
+    <script>
+        function nxtPage() {
+            window.location.href="../HTML/rapidfire.html"
+        }
+    </script>
+
     <script src="../JS/rapidfire.js"></script>
 </body>
 </html>

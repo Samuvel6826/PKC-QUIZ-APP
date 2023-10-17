@@ -152,7 +152,7 @@ button:hover{
 }
 
 .alert{
-    font-size: 4rem;
+    font-size: 2rem;
     display: grid;
     height: 100%;
     place-items:  center; 
@@ -161,11 +161,11 @@ button:hover{
 #alert-container {
     background-color: #5d9b63;
     border-radius: 5px;
-    height: 100%;
+    height: 125px;
     width: 100%;
     padding: 12px;
     position: absolute;
-    top: 50;
+    top: 5px;
     display: none;
 }
 

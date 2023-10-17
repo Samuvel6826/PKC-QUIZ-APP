@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion Rules</title>
+    <link rel="stylesheet" href="../CSS/connexion.css">
 </head>
 <body>
     <h1 style="font-size: 4rem;">Connexion Round Instructions</h1>
@@ -12,6 +13,16 @@
        2. Two questions for each team <br>
        3. Each answer carry 10 marks.
     </div>
-    <a href="../HTML/connexion.html">6. Connexion Round</a>
+
+    <div id="btnBox">
+        <button class="btn glow-on-hover playBtn" onclick="nxtPage()">Let's Play</button>
+    </div>
+
+    <script>
+        function nxtPage() {
+            window.location.href="../HTML/connexion.html"
+        }
+    </script>
+    
 </body>
 </html>
