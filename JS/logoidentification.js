@@ -1,15 +1,22 @@
 const container = document.querySelector('.container');
 const questionBox = document.querySelector('.question');
-const choicesBox = document.querySelector('.choices');
 const nextBtn = document.querySelector('.nextBtn');
 nextBtn.style.display = "none";
-const scoreCard = document.querySelector('.scoreCard');
 const alert = document.querySelector('.alert');
 const alertBox = document.querySelector("#alert-container")
 const startBtn = document.querySelector('.startBtn');
 const timer = document.querySelector('.timer');
 timer.style.display = "none";
 let picture = document.querySelector("#picture")
+const correct = document.querySelector("#correct")
+const wrong = document.querySelector("#wrong")
+const hmbtn = document.querySelector(".homeBtn")
+
+hmbtn.addEventListener('click', () => {
+    window.location.href="../index.html"
+});
+
+const timeoutSound = document.querySelector("#timeoutSound")
 
 // Make an array of objects that stores question, choices of question and answer
 const quiz = [
@@ -83,7 +90,6 @@ nextBtn.addEventListener('click', () => {
 
 // Function to check answers
 const checkAnswer = () => {
-    displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
     currentQuestionIndex++;
     if (currentQuestionIndex < quiz.length) {
         showQuestions();
@@ -124,6 +130,8 @@ function startTimer() {
         if (timeLeft === 0) {
             stopTimer();                                                            // SAM 
             displayAlert("Timeout!");
+            timeoutSound.play()
+            questionBox.innerHTML = quiz[currentQuestionIndex].answer
         }
 
     }
@@ -134,3 +142,11 @@ function startTimer() {
 const stopTimer = () =>{
     clearInterval(timerID);
 }
+
+document.addEventListener("keyup", (event) => {
+    if (event.key=="j") {
+        displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+        wrong.play()
+        checkAnswer();
+    }
+  });

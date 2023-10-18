@@ -12,18 +12,6 @@ body {
     color: #fff;
 }
 
-#cover {
-    height: 650px;
-    width: 80%;
-}
-
-#quiz-container {
-    height: 500px;
-    width: 100%;
-    position: relative;
-    margin: auto;
-}
-
 #banner {
     height: 200px;
     display: flex;

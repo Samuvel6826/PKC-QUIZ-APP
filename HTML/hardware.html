@@ -2,34 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardware Round</title>
     <link rel="stylesheet" href="../CSS/hardware.css">
+    <title>Software Round</title>
 </head>
 <body>
     <div id="cover">
+
+        <div id="height"></div>
+
         <div id="quiz-container">
+            
             <div class="timer">0</div>
-            <div class="heading">Hardware Round</div>  
+            <div class="heading">Software Round</div>  
            
         <div class="container">
+            
             <div class="question"></div>
-            <div class="choices"></div>
-            <div class="scoreCard"></div>
-        </div>
 
-        <div class="startBtnBox">
-            <button class="btn glow-on-hover startBtn">Start</button>
+            <audio id="correct" src="../Audio Effects/correct-6033.mp3"></audio>
+            <audio id="wrong" src="../Audio Effects/buzzer-gameshow-wrong-answer-soundroll-1-00-01.mp3"></audio>
+            <audio id="timeoutSound" src="../Audio Effects/explosion-6288.mp3"></audio>
+            
         </div>
         
         </div>
-
+    <button class="btn glow-on-hover homeBtn">Home</button>
+    <button class="btn glow-on-hover startBtn">Start</button>
     <button class="btn glow-on-hover nextBtn">Next</button>
     </div>
 
     <div id="alert-container">
         <div class="alert"></div>
     </div>
+  
     <script src="../JS/hardware.js"></script>
 </body>
 </html>

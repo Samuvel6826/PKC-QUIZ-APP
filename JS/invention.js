@@ -1,9 +1,7 @@
 const container = document.querySelector('.container');
 const questionBox = document.querySelector('.question');
-const choicesBox = document.querySelector('.choices');
 const nextBtn = document.querySelector('.nextBtn');
 nextBtn.style.display = "none";
-const scoreCard = document.querySelector('.scoreCard');
 const alert = document.querySelector('.alert');
 const alertBox = document.querySelector("#alert-container")
 const startBtn = document.querySelector('.startBtn');
@@ -11,8 +9,13 @@ const timer = document.querySelector('.timer');
 timer.style.display = "none";
 const correct = document.querySelector("#correct")
 const wrong = document.querySelector("#wrong")
+const hmbtn = document.querySelector(".homeBtn")
 
+hmbtn.addEventListener('click', () => {
+    window.location.href="../index.html"
+});
 
+const timeoutSound = document.querySelector("#timeoutSound")
 
 // Make an array of objects that stores question, choices of question and answer
 const quiz = [
@@ -67,7 +70,7 @@ const quiz = [
     //     answer: "D. Doulas Engelbart"
     // },
     // {
-    //     question: `11. Who is considered the “father of computer science”?`,
+    //     question: `11. Who is considered the “father of computer science”?`,                               // chg
     //     choices: ["A. Alan Turing", "B. Charles Babbage", "C. John von Neumann", "D. Tim Berners-Lee"],
     //     answer: "A. Alan Turing"
     // },
@@ -88,7 +91,7 @@ const quiz = [
     // }
     // ,
     // {
-    //     question: "15. What year was the first message sent over the ARPANET, the precursor to the internet?",
+    //     question: "15. In Which year was the first message sent over the ARPANET, the precursor to the internet?",
     //     choices: ["A. 1957", "B. 1969", "C. 1976", "D. 1983"],
     //     answer: "B. 1969"
     // }
@@ -118,7 +121,7 @@ const quiz = [
     // }
     // ,
     // {
-    //     question: "20. What year did the first commercial computer, UNIVAC I, become operational?",
+    //     question: "20. In Which year did the first commercial computer, UNIVAC I, become operational?",
     //     choices: ["A. 1941", "B. 1951", "C. 1961", "D. 1971"],
     //     answer: "B. 1951"
     // }
@@ -136,13 +139,13 @@ const quiz = [
     // }
     //  ,
     // {
-    //     question: "23. What year did Microsoft release its first version of Windows?",
+    //     question: "23. In Which year did Microsoft release its first version of Windows?",
     //     choices: ["A. 1980", "B. 1985", "C. 1990", "D. 1995"],
     //     answer: " B. 1985 "
     // }
     //  ,
     // {
-    //     question: "24. When was the introduction of the first computer mouse by Douglas Engelbart?",
+    //     question: "24. When was the introduction of the first computer mouse?",
     //     choices: ["A. 1956", "B. 1964", "C. 1973", "D. 1980"],
     //     answer: "B. 1964 "
     // }
@@ -176,7 +179,6 @@ startBtn.addEventListener('click', ()=> {
 const startQuiz = () => {
     timeLeft = 15;
     timer.style.display = "flex";
-    // shuffleQuestions();
     currentQuestionIndex = 0;
     showQuestions();
 }
@@ -185,28 +187,6 @@ const startQuiz = () => {
 const showQuestions = () => {
     const questionDetails = quiz[currentQuestionIndex];
     questionBox.textContent = questionDetails.question;
-
-    choicesBox.textContent = "";
-    for (let i = 0; i < questionDetails.choices.length; i++) {
-        const currentChoice = questionDetails.choices[i];
-        // const choiceDiv = document.createElement('div');
-        // choiceDiv.textContent = currentChoice;
-        // choiceDiv.classList.add('choice');
-        // choicesBox.appendChild(choiceDiv);
-
-        // choiceDiv.addEventListener('click', () => {
-        //     if (choiceDiv.classList.contains('selected')) {
-        //         choiceDiv.classList.remove('selected');
-        //     }
-        //     else {
-        //         choiceDiv.classList.add('selected');
-        //             const selectedChoice = document.querySelector('.choice.selected');                         // SAM
-        //             if (selectedChoice) {
-        //                 checkAnswer()
-        //             }
-        //     }
-        // });
-    }
     
     if(currentQuestionIndex < quiz.length){                                                                 // SAM
         startTimer();
@@ -214,17 +194,10 @@ const showQuestions = () => {
 }
 
 nextBtn.addEventListener('click', () => {
-    // const selectedChoice = document.querySelector('.choice.selected');
-    // if (!selectedChoice && nextBtn.textContent === "Next") {
-    //     // alert("Select your answer");            
-    //     displayAlert("Select your answer");
-    //     return;
-    // }
     if (quizOver) {
         window.location.href = "../Rules HTML/abbreviation rules.html"  // REDIRECT
     }
     else {
-        displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
         correct.play()
         checkAnswer();
     }
@@ -232,19 +205,6 @@ nextBtn.addEventListener('click', () => {
 
 // Function to check answers
 const checkAnswer = () => {
-    // const selectedChoice = document.querySelector('.choice.selected');
-    // console.log(selectedChoice.textContent)  
-    // if (selectedChoice.textContent === quiz[currentQuestionIndex].answer) {
-    //     // alert("Correct Answer!");       
-    //     displayAlert("Correct Answer!");
-    //     correct.play()
-    //     score++;
-    // }
-    // else {
-    //     // alert("Wrong answer");                                                                                   
-    //     displayAlert(`Wrong Answer! ${quiz[currentQuestionIndex].answer} is the Correct Answer`);
-    //     wrong.play()
-    // }
     timeLeft = 15;
     currentQuestionIndex++;
     if (currentQuestionIndex < quiz.length) {
@@ -267,9 +227,6 @@ const displayAlert = (msg) => {
 
 // Function to show score
 const showScore = () => {
-    // questionBox.textContent = "";
-    // choicesBox.textContent = "";
-    // scoreCard.textContent = `You Scored ${score} out of ${quiz.length}!`;
     displayAlert("You have completed this quiz!");
     nextBtn.textContent = "Next Round";
     quizOver = true;
@@ -287,6 +244,8 @@ function startTimer() {
         if (timeLeft === 0) {
             stopTimer();                                                            // SAM 
             displayAlert("Timeout!");
+            timeoutSound.play()
+            questionBox.innerHTML = quiz[currentQuestionIndex].answer
         }
 
     }
@@ -302,5 +261,6 @@ document.addEventListener("keyup", (event) => {
     if (event.key=="j") {
         displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
         wrong.play()
+        checkAnswer();
     }
   });
