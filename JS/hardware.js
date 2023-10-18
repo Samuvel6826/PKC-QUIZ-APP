@@ -313,7 +313,7 @@ function startTimer() {
         }
 
     }
-    timerID = setInterval(countDown, 1500);
+    timerID = setInterval(countDown, 1000);
 }
 
 // Function to Stop Timer

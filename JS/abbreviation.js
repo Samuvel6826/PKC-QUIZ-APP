@@ -15,143 +15,81 @@ timer.style.display = "none";
 // Make an array of objects that stores question, choices of question and answer
 const quiz = [
     {
-        question: "1. Which company invented the first floppy disk?",
-        choices: ["A. Samsung", "B. Sony", "C. Dell", "D. IBM"],
-        answer: "D. IBM"
+        question: "1. With respect to computer processing speed. What is the full form of MIPS?",
+        choices: ["A. Millions of Instructions Per Second", "B. Millions of Instructions Per Speed", "C. Millions of Instructions Per Signal", "D. Millions of Instructions Per Symbol"],
+        answer: "A. Millions of Instructions Per Second"
     },
     {
-        question: "2. Who is the father Of Computer science?",
-        choices: ["A.Allen Turing"],
-        answer: "A.Allen Turing"
+        question: "2. In the field of computer VIRUS stands for",
+        choices: ["A. Very Intelligent Result Until Source", "B. Vital Information Resource Under Siege", "C. Viral Important Record User Searched", "D. Very Interchanged Resource Under Search"],
+        answer: "B. Vital Information Resource Under Siege"
+    },
+    {
+        question: "3. SD RAM stands for ",
+        choices: ["A. Serial Dynamic RAM", "B. Straight Dynamic RAM", "C. Surface Dynamic RAM", "D. Synchronous Dynamic RAM"],
+        answer: "D. Synchronous Dynamic RAM"
     },
     // {
-    //     question: "3. Who is the father of personal computer? ",
-    //     choices: ["A. Edward Robert"],
-    //     answer: "A. Edward Robert"
+    //     question: "4. With respect to the information technology. What does GIS stands for?",
+    //     choices: ["A. Geographical International Studies", "B. Geographical Information Systems", "C. Global Institute for Soils", "D. Global Information Statistics"],
+    //     answer: "B. Geographical Information Systems"
     // },
     // {
-    //     question: "4. Who invented Compact Disc?",
-    //     choices: ["A. Fujio Masuoka", "B. Thomas Edison", "C. James T. Russell", "D. Martin Cooper"],
-    //     answer: "C. James T. Russell"
+    //     question: `5. The full form of "SQL" is`,
+    //     choices: ["A. Student Query Line", "B. Structured Question List", "C.Straight Query Language", "D. Structured Query Language"],
+    //     answer: "D. Structured Query Language"
     // },
     // {
-    //     question: `5. Who invented the high level language"C"?`,
-    //     choices: ["A. Dennis M. Ritchie"],
-    //     answer: "A. Dennis M. Ritchie"
+    //     question: "6. The process of transferring files from Internet to user Computer is called",
+    //     choices: ["A. Downloading", "B. Uploading", "C. FTP", "D. JPEG"],
+    //     answer: "A. Downloading"
     // },
     // {
-    //     question: "6. What was the invention of Gene Dolgoff?",
-    //     choices: ["A. LCD television", "B. LCD projector", "C. LCD Printer", "D. LCD"],
-    //     answer: "B. LCD projector"
+    //     question: "7. What is the full form of COBOL?",
+    //     choices: ["A. Common Basic Operating Language", "B. Computer Basic Oriented Language", "C. Computer Based Operating Language", "D. Common Business Oriented Language"],
+    //     answer: "D. Common Business Oriented Language"
     // },
     // {
-    //     question: "7. Who invented Compact Disc?",
-    //     choices: ["A. James T. Russell", "B. Fujio Masuoka", "C. Thomas Edison", "D. Martin Cooper"],
-    //     answer: "A. James T. Russell"
+    //     question: "8. What is the full form of PNG in the computer image format?",
+    //     choices: ["A. Printable New Graphic", "B. Printable New Graphical", "C. Port Natural Graphics", "D. Portable Network Graphics"],
+    //     answer: "D. Portable Network Graphics"
     // },
     // {
-    //     question: "8. Who invented the first 3D printer?",
-    //     choices: ["A. Nick Holonyak", "B. Lord Kelvin", "C. Johannes Gutenberg", "D. Chuck Hull"],
-    //     answer: "D. Chuck Hull"
+    //     question: "9. The standard internet protocol is",
+    //     choices: ["A. TCP/IP", "B. UDP", "C. FTP", "D. www"],
+    //     answer: "A. TCP/IP"
     // },
     // {
-    //     question: "9. What was the invention of Norman Joseph Woodland?",
-    //     choices: ["A. QR code", "B. Genetic code", "C. Morse code", "D. Barcode"],
-    //     answer: "D. Barcode"
+    //     question: "10. USB Pendrive is which type of storage device?",
+    //     choices: ["A. Primary", "B. Secondary", "C. Tertiary", "D. None of the above"],
+    //     answer: "B. Secondary"
     // },
     // {
-    //     question: "10. Who invented the computer mouse?",
-    //     choices: ["A. Alan Kay", "B. Tim Berners-Lee", "C. Ivan Sutherland", "D. Doulas Engelbart"],
-    //     answer: "D. Doulas Engelbart"
+    //     question: `11. Which of the following is the correct full form of JPEG?`,
+    //     choices: ["A. Joint Photography Exports Group", "B. Joint Pixel Experts Group", "C. Joint Photographic Experts Group", "D. Joint Pixel Exports Group"],
+    //     answer: "C. Joint Photographic Experts Group"
     // },
     // {
-    //     question: `11. Who is considered the “father of computer science”?`,
-    //     choices: ["A. Alan Turing", "B. Charles Babbage", "C. John von Neumann", "D. Tim Berners-Lee"],
-    //     answer: "A. Alan Turing"
+    //     question: "12. In the context of computers. WORM is an acronym of?",
+    //     choices: ["A. Write Once. Read Many", "B. Word On. RAM Memory", "C. Word Optical. Recognition Malware", "D. Wireless Operating. Read Module"],
+    //     answer: "A. Write Once. Read Many"
     // },
     // {
-    //     question: "12. What was the first programmable mechanical computer?",
-    //     choices: ["A. ENIAC", "B. UNIVAC I", "C. Analytical Engine", "D. Z3"],
-    //     answer: "C. Analytical Engine"
+    //     question: "13. What is the full form of PROM?",
+    //     choices: ["A. Primary read-only memory", "B. Programmable read-only memory", "C. Program read-output memory ", "D. Program read-only memory"],
+    //     answer: "B. Programmable read-only memory"
     // },
     // {
-    //     question: "13. When was the first electronic digital computer, ENIAC, completed?",
-    //     choices: ["A. 1936 ", "B. 1945", "C. 1951 ", "D. 1960"],
-    //     answer: "B. 1945"
-    // },
-    // {
-    //     question: "14. Who co-invented the first high-level programming language, Fortran?",
-    //     choices: ["A. Alan Turing ", "B. Grace Hopper ", "C. John Backus", "D. John von Neumann"],
-    //     answer: "C. John Backus"
+    //     question: "14. SMTP stands for ________",
+    //     choices: ["A. Switch mode Transfer Programming", "B. Switch mode Transfer Protocol ", "C. Simple Mail Transfer Prortocol", "D. Simple Main Transfer Prortocol"],
+    //     answer: "C. Simple Mail Transfer Prortocol"
     // }
     // ,
     // {
-    //     question: "15. What year was the first message sent over the ARPANET, the precursor to the internet?",
-    //     choices: ["A. 1957", "B. 1969", "C. 1976", "D. 1983"],
-    //     answer: "B. 1969"
+    //     question: "15. MDI stands for ______",
+    //     choices: ["A. Multiple Document Interface", "B. Multiple Design Interface", "C. Multiple Design Interaction", "D. Multiple Document Interaction"],
+    //     answer: "A. Multiple Document Interface"
     // }
-    // ,
-    // {
-    //     question: "16. Who developed the first graphical user interface (GUI) and computer mouse?",
-    //     choices: ["A. Douglas Engelbart", "B. Tim Berners-Lee", "C. Steve Jobs", "D. Charles Babbage"],
-    //     answer: "A. Douglas Engelbart"
-    // }
-    // ,
-    // {
-    //     question: "17. When was the World Wide Web (WWW) invented by Tim Berners-Lee?",
-    //     choices: ["A. 1979", "B. 1985", "C. 1989", "D. 1995"],
-    //     answer: "C. 1989"
-    // }
-    // ,
-    // {
-    //     question: "18. Who founded Apple Inc. along with Steve Wozniak and Ronald Wayne?",
-    //     choices: ["A. Steve Jobs", "B. Bill Gates", "C. Tim Cook", "D. Mark Zuckerberg"],
-    //     answer: "A. Steve Jobs "
-    // }
-    // ,
-    // {
-    //     question: "19. When did Intel release the first microprocessor, the 4004?",
-    //     choices: ["A. 1965", "B. 1971", "C. 1980", "D. 1990"],
-    //     answer: "B. 1971"
-    // }
-    // ,
-    // {
-    //     question: "20. What year did the first commercial computer, UNIVAC I, become operational?",
-    //     choices: ["A. 1941", "B. 1951", "C. 1961", "D. 1971"],
-    //     answer: "B. 1951"
-    // }
-    //  ,
-    // {
-    //     question: "21. When was the release of the first widely popular personal computer, the IBM PC?",
-    //     choices: ["A. 1965", "B. 1976", "C. 1981", "D. 1990"],
-    //     answer: "C. 1981"
-    // }
-    //  ,
-    // {
-    //     question: "22. Who coined the term “artificial intelligence?",
-    //     choices: ["A. Alan Turing", "B. John McCarthy", "C. Grace Hopper", "D. John Backus"],
-    //     answer: "B. John McCarthy "
-    // }
-    //  ,
-    // {
-    //     question: "23. What year did Microsoft release its first version of Windows?",
-    //     choices: ["A. 1980", "B. 1985", "C. 1990", "D. 1995"],
-    //     answer: " B. 1985 "
-    // }
-    //  ,
-    // {
-    //     question: "24. When was the introduction of the first computer mouse by Douglas Engelbart?",
-    //     choices: ["A. 1956", "B. 1964", "C. 1973", "D. 1980"],
-    //     answer: "B. 1964 "
-    // }
-    //  ,
-    // {
-    //     question: "25. Who is known for creating the first programming language, the “Assembly for UNIVAC I?",
-    //     choices: ["A. Alan Turing", "B. Grace Hopper", "C. John Backus", "D. John von Neumann"],
-    //     answer: "B. Grace Hopper "
-    //  }
-
-
 ];
 
 // Making Variables
@@ -178,16 +116,6 @@ const startQuiz = () => {
     currentQuestionIndex = 0;
     showQuestions();
 }
-
-// Function to shuffle question
-// const shuffleQuestions = () =>{
-//     for(let i=quiz.length-1; i>0; i--){
-//         const j = Math.floor(Math.random() * (i+1));
-//         [quiz[i], quiz[j]] = [quiz[j], quiz[i]];
-//     }
-//     currentQuestionIndex = 0;
-//     showQuestions();
-// }
 
 // Arrow Function to Show Questions
 const showQuestions = () => {
@@ -313,7 +241,7 @@ function startTimer() {
         }
 
     }
-    timerID = setInterval(countDown, 1500);
+    timerID = setInterval(countDown, 1000);
 }
 
 // Function to Stop Timer

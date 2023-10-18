@@ -32,7 +32,7 @@ body {
    background-image: linear-gradient(
      -225deg,
      #2c00cc 0%,
-     #5a00ba 29%,
+     #00ff7b 29%,
      #ff1361 67%,
      #fff800 100%
    );
@@ -83,7 +83,7 @@ body {
 }
 
 .container .question {
-    font-size: 26px;
+    font-size: 4rem;
     margin-top: 20px;
 }
 

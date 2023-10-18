@@ -26,31 +26,31 @@ const quiz = [
         choices: ["A.Allen Turing"],
         answer: "A.Allen Turing"
     },
-    // {
-    //     question: "3. Who is the father of personal computer? ",
-    //     choices: ["A. Edward Robert"],
-    //     answer: "A. Edward Robert"
-    // },
-    // {
-    //     question: "4. Who invented Compact Disc?",
-    //     choices: ["A. Fujio Masuoka", "B. Thomas Edison", "C. James T. Russell", "D. Martin Cooper"],
-    //     answer: "C. James T. Russell"
-    // },
-    // {
-    //     question: `5. Who invented the high level language"C"?`,
-    //     choices: ["A. Dennis M. Ritchie"],
-    //     answer: "A. Dennis M. Ritchie"
-    // },
-    // {
-    //     question: "6. What was the invention of Gene Dolgoff?",
-    //     choices: ["A. LCD television", "B. LCD projector", "C. LCD Printer", "D. LCD"],
-    //     answer: "B. LCD projector"
-    // },
-    // {
-    //     question: "7. Who invented Compact Disc?",
-    //     choices: ["A. James T. Russell", "B. Fujio Masuoka", "C. Thomas Edison", "D. Martin Cooper"],
-    //     answer: "A. James T. Russell"
-    // },
+    {
+        question: "3. Who is the father of personal computer? ",
+        choices: ["A. Edward Robert"],
+        answer: "A. Edward Robert"
+    },
+    {
+        question: "4. Who invented Compact Disc?",
+        choices: ["A. Fujio Masuoka", "B. Thomas Edison", "C. James T. Russell", "D. Martin Cooper"],
+        answer: "C. James T. Russell"
+    },
+    {
+        question: `5. Who invented the high level language"C"?`,
+        choices: ["A. Dennis M. Ritchie"],
+        answer: "A. Dennis M. Ritchie"
+    },
+    {
+        question: "6. What was the invention of Gene Dolgoff?",
+        choices: ["A. LCD television", "B. LCD projector", "C. LCD Printer", "D. LCD"],
+        answer: "B. LCD projector"
+    },
+    {
+        question: "7. Who invented Compact Disc?",
+        choices: ["A. James T. Russell", "B. Fujio Masuoka", "C. Thomas Edison", "D. Martin Cooper"],
+        answer: "A. James T. Russell"
+    },
     // {
     //     question: "8. Who invented the first 3D printer?",
     //     choices: ["A. Nick Holonyak", "B. Lord Kelvin", "C. Johannes Gutenberg", "D. Chuck Hull"],
@@ -189,23 +189,23 @@ const showQuestions = () => {
     choicesBox.textContent = "";
     for (let i = 0; i < questionDetails.choices.length; i++) {
         const currentChoice = questionDetails.choices[i];
-        const choiceDiv = document.createElement('div');
-        choiceDiv.textContent = currentChoice;
-        choiceDiv.classList.add('choice');
-        choicesBox.appendChild(choiceDiv);
+        // const choiceDiv = document.createElement('div');
+        // choiceDiv.textContent = currentChoice;
+        // choiceDiv.classList.add('choice');
+        // choicesBox.appendChild(choiceDiv);
 
-        choiceDiv.addEventListener('click', () => {
-            if (choiceDiv.classList.contains('selected')) {
-                choiceDiv.classList.remove('selected');
-            }
-            else {
-                choiceDiv.classList.add('selected');
-                    const selectedChoice = document.querySelector('.choice.selected');                         // SAM
-                    if (selectedChoice) {
-                        checkAnswer()
-                    }
-            }
-        });
+        // choiceDiv.addEventListener('click', () => {
+        //     if (choiceDiv.classList.contains('selected')) {
+        //         choiceDiv.classList.remove('selected');
+        //     }
+        //     else {
+        //         choiceDiv.classList.add('selected');
+        //             const selectedChoice = document.querySelector('.choice.selected');                         // SAM
+        //             if (selectedChoice) {
+        //                 checkAnswer()
+        //             }
+        //     }
+        // });
     }
     
     if(currentQuestionIndex < quiz.length){                                                                 // SAM
@@ -214,35 +214,37 @@ const showQuestions = () => {
 }
 
 nextBtn.addEventListener('click', () => {
-    const selectedChoice = document.querySelector('.choice.selected');
-    if (!selectedChoice && nextBtn.textContent === "Next") {
-        // alert("Select your answer");            
-        displayAlert("Select your answer");
-        return;
-    }
+    // const selectedChoice = document.querySelector('.choice.selected');
+    // if (!selectedChoice && nextBtn.textContent === "Next") {
+    //     // alert("Select your answer");            
+    //     displayAlert("Select your answer");
+    //     return;
+    // }
     if (quizOver) {
         window.location.href = "../Rules HTML/abbreviation rules.html"  // REDIRECT
     }
     else {
+        displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+        correct.play()
         checkAnswer();
     }
 });
 
 // Function to check answers
 const checkAnswer = () => {
-    const selectedChoice = document.querySelector('.choice.selected');
+    // const selectedChoice = document.querySelector('.choice.selected');
     // console.log(selectedChoice.textContent)  
-    if (selectedChoice.textContent === quiz[currentQuestionIndex].answer) {
-        // alert("Correct Answer!");       
-        displayAlert("Correct Answer!");
-        correct.play()
-        score++;
-    }
-    else {
-        // alert("Wrong answer");                                                                                   
-        displayAlert(`Wrong Answer! ${quiz[currentQuestionIndex].answer} is the Correct Answer`);
-        wrong.play()
-    }
+    // if (selectedChoice.textContent === quiz[currentQuestionIndex].answer) {
+    //     // alert("Correct Answer!");       
+    //     displayAlert("Correct Answer!");
+    //     correct.play()
+    //     score++;
+    // }
+    // else {
+    //     // alert("Wrong answer");                                                                                   
+    //     displayAlert(`Wrong Answer! ${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+    //     wrong.play()
+    // }
     timeLeft = 15;
     currentQuestionIndex++;
     if (currentQuestionIndex < quiz.length) {
@@ -265,9 +267,9 @@ const displayAlert = (msg) => {
 
 // Function to show score
 const showScore = () => {
-    questionBox.textContent = "";
-    choicesBox.textContent = "";
-    scoreCard.textContent = `You Scored ${score} out of ${quiz.length}!`;
+    // questionBox.textContent = "";
+    // choicesBox.textContent = "";
+    // scoreCard.textContent = `You Scored ${score} out of ${quiz.length}!`;
     displayAlert("You have completed this quiz!");
     nextBtn.textContent = "Next Round";
     quizOver = true;
@@ -295,3 +297,10 @@ function startTimer() {
 const stopTimer = () =>{
     clearInterval(timerID);
 }
+
+document.addEventListener("keyup", (event) => {
+    if (event.key=="j") {
+        displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+        wrong.play()
+    }
+  });
