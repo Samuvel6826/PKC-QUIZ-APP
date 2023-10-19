@@ -22,80 +22,65 @@ const timeoutSound = document.querySelector("#timeoutSound")
 // Make an array of objects that stores question, choices of question and answer
 const quiz = [
     {
-        question: "1. MIPS?",
-        choices: ["A. Millions of Instructions Per Second", "B. Millions of Instructions Per Speed", "C. Millions of Instructions Per Signal", "D. Millions of Instructions Per Symbol"],
-        answer: "A. Millions of Instructions Per Second"
+        question: "1. What is the primary function of a CPU (Central Processing Unit)?",
+        answer: "Processing instructions"
     },
     {
-        question: "2. UHF?",
-        choices: ["A. Very Intelligent Result Until Source", "B. Vital Information Resource Under Siege", "C. Viral Important Record User Searched", "D. Very Interchanged Resource Under Search"],
-        answer: "B. Vital Information Resource Under Siege"
+        question: "2. From what location are the 1st computer instructions available on boot up?",
+        answer: "ROM BIOS"
     },
     {
-        question: "3. OpenGL?",
-        choices: ["A. Serial Dynamic RAM", "B. Straight Dynamic RAM", "C. Surface Dynamic RAM", "D. Synchronous Dynamic RAM"],
-        answer: "D. Synchronous Dynamic RAM"
+        question: "3. What could cause a fixed disk error?",
+        answer: "Incorrect CMOS settings"
     },
     // {
-    //     question: "4. GIS?",
-    //     choices: ["A. Geographical International Studies", "B. Geographical Information Systems", "C. Global Institute for Soils", "D. Global Information Statistics"],
-    //     answer: "B. Geographical Information Systems"
+    //     question: "4. Missing slot covers on a computer can cause?",
+    //     answer: "over heat"
     // },
     // {
-    //     question: "5. SNOBOL?",
-    //     choices: ["A. Student Query Line", "B. Structured Question List", "C.Straight Query Language", "D. Structured Query Language"],
-    //     answer: "D. Structured Query Language"
+    //     question: "5. With respect to a network interface card, the term 10/100 refers to?",
+    //     answer: "megabits per seconds"
     // },
     // {
-    //     question: "6. RIP?",
-    //     choices: ["A. Downloading", "B. Uploading", "C. FTP", "D. JPEG"],
-    //     answer: "A. Downloading"
+    //     question: "6. Which Motherboard form factor uses one 20 pin connector?",
+    //     answer: "ATX"
     // },
     // {
-    //     question: "7. SNAP?",
-    //     choices: ["A. Common Basic Operating Language", "B. Computer Basic Oriented Language", "C. Computer Based Operating Language", "D. Common Business Oriented Language"],
-    //     answer: "D. Common Business Oriented Language"
+    //     question: "7. A hard disk is divided into tracks which are further subdivided into:?",
+    //     answer: "sectors"
     // },
     // {
-    //     question: "8. DOC?",
-    //     choices: ["A. Printable New Graphic", "B. Printable New Graphical", "C. Port Natural Graphics", "D. Portable Network Graphics"],
-    //     answer: "D. Portable Network Graphics"
+    //     question: "8. During preventative maintenance on a dot matrix printer, do NOT lubricate:?",
+    //     answer: "Print head pins"
     // },
     // {
-    //     question: "9. HSDPA?",
-    //     choices: ["A. TCP/IP", "B. UDP", "C. FTP", "D. www"],
-    //     answer: "A. TCP/IP"
+    //     question: "9. Which component is responsible for storing data and programs on a computer?",
+    //     answer: "HDD (Hard Disk Drive)"
     // },
     // {
-    //     question: "10. LLL?",
-    //     choices: ["A. Primary", "B. Secondary", "C. Tertiary", "D. None of the above"],
-    //     answer: "B. Secondary"
+    //     question: "10. : Which hardware component is responsible for providing power to all other components in a computer?",
+    //     answer: "PSU (Power Supply Unit)"
     // },
     // {
-    //     question: "11. DNA?",
-    //     choices: ["A. Joint Photography Exports Group", "B. Joint Pixel Experts Group", "C. Joint Photographic Experts Group", "D. Joint Pixel Exports Group"],
-    //     answer: "C. Joint Photographic Experts Group"
+    //     question: "11. What type of storage device has no moving parts and is known for its speed and durability?",
+    //     answer: "SSD (Solid State Drive)"
     // },
     // {
-    //     question: "12. In the context of computers. WORM is an acronym of?",
-    //     choices: ["A. Write Once. Read Many", "B. Word On. RAM Memory", "C. Word Optical. Recognition Malware", "D. Wireless Operating. Read Module"],
-    //     answer: "A. Write Once. Read Many"
+    //     question: "12. Which component controls the communication between the CPU and other hardware components?",
+    //     answer: "Motherboard"
     // },
     // {
-    //     question: "13. VOIP?",
-    //     choices: ["A. Primary read-only memory", "B. Programmable read-only memory", "C. Program read-output memory ", "D. Program read-only memory"],
-    //     answer: "B. Programmable read-only memory"
+    //     question: "13. What is the function of a sound card in a computer?",
+    //     answer: " Providing audio output"
     // },
     // {
-    //     question: "14. Yahoo?",
-    //     choices: ["A. Switch mode Transfer Programming", "B. Switch mode Transfer Protocol ", "C. Simple Mail Transfer Prortocol", "D. Simple Main Transfer Prortocol"],
-    //     answer: "C. Simple Mail Transfer Prortocol"
+    //     question: "14. What is the standard interface used to connect external devices to a computer, such as a keyboard or mouse?",
+    //     answer: "USB (Universal Serial Bus)"
     // }
     // ,
     // {
-    //     question: "15. MDI stands for ______?",
-    //     choices: ["A. Multiple Document Interface", "B. Multiple Design Interface", "C. Multiple Design Interaction", "D. Multiple Document Interaction"],
-    //     answer: "A. Multiple Document Interface"
+    //     question: "15. What is the function of a network card (NIC) in a computer?",
+    //     answer: "Managing network connections"
     // }
 ];
 

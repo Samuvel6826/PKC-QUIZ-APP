@@ -22,80 +22,66 @@ const timeoutSound = document.querySelector("#timeoutSound")
 // Make an array of objects that stores question, choices of question and answer
 const quiz = [
     {
-        question: "1. MIPS?",
-        choices: ["A. Millions of Instructions Per Second", "B. Millions of Instructions Per Speed", "C. Millions of Instructions Per Signal", "D. Millions of Instructions Per Symbol"],
-        answer: "A. Millions of Instructions Per Second"
+        question: "1. What are the two categories of software?",
+        answer: "Application and System Software"
     },
     {
-        question: "2. UHF?",
-        choices: ["A. Very Intelligent Result Until Source", "B. Vital Information Resource Under Siege", "C. Viral Important Record User Searched", "D. Very Interchanged Resource Under Search"],
-        answer: "B. Vital Information Resource Under Siege"
+        question: "2. Which virus attaches itself directly to an (.exe) or a (.com) file and enters the device its execution?",
+        answer: "Direct Action Virus"
     },
     {
-        question: "3. OpenGL?",
-        choices: ["A. Serial Dynamic RAM", "B. Straight Dynamic RAM", "C. Surface Dynamic RAM", "D. Synchronous Dynamic RAM"],
-        answer: "D. Synchronous Dynamic RAM"
+        question: "3. Some software packages attempt to encode the knowledge and decision rules of human specialists in order to use them for making their own decisions. By what name are such packages known?",
+        answer: "Expert system"
     },
     // {
-    //     question: "4. GIS?",
-    //     choices: ["A. Geographical International Studies", "B. Geographical Information Systems", "C. Global Institute for Soils", "D. Global Information Statistics"],
-    //     answer: "B. Geographical Information Systems"
+    //     question: "4. ______ is a malicious program that executes when a certain criterion is met or a certain file is accessed or when a certain key combination is pressed?",
+    //     answer: "Logic Bomb"
     // },
     // {
-    //     question: "5. SNOBOL?",
-    //     choices: ["A. Student Query Line", "B. Structured Question List", "C.Straight Query Language", "D. Structured Query Language"],
-    //     answer: "D. Structured Query Language"
+    //     question: "5. A software which is freely available on the internet for users and with source code for enabling further enhancements by developers is called",
+    //     answer: "Open Source Software"
     // },
     // {
-    //     question: "6. RIP?",
-    //     choices: ["A. Downloading", "B. Uploading", "C. FTP", "D. JPEG"],
-    //     answer: "A. Downloading"
+    //     question: "6. What is the name of the software system which combines many independent functions into one packages?",
+    //     answer: "Integrated System"
     // },
     // {
-    //     question: "7. SNAP?",
-    //     choices: ["A. Common Basic Operating Language", "B. Computer Basic Oriented Language", "C. Computer Based Operating Language", "D. Common Business Oriented Language"],
-    //     answer: "D. Common Business Oriented Language"
+    //     question: "7. Program which is readily available for computer users as a part of software package is classified as?",
+    //     answer: "Library Program"
     // },
     // {
-    //     question: "8. DOC?",
-    //     choices: ["A. Printable New Graphic", "B. Printable New Graphical", "C. Port Natural Graphics", "D. Portable Network Graphics"],
-    //     answer: "D. Portable Network Graphics"
+    //     question: "8. Function of running and loading programs by use of peripherals is function of?",
+    //     answer: "Operating System"
     // },
     // {
-    //     question: "9. HSDPA?",
-    //     choices: ["A. TCP/IP", "B. UDP", "C. FTP", "D. www"],
-    //     answer: "A. TCP/IP"
+    //     question: "9. _____ is the fraudulant act of acquiring private and sensitive information. Such as credit card numbers, personal identification and account usernames and passwords?",
+    //     answer: "Pishing"
     // },
     // {
-    //     question: "10. LLL?",
-    //     choices: ["A. Primary", "B. Secondary", "C. Tertiary", "D. None of the above"],
-    //     answer: "B. Secondary"
+    //     question: "10. In DASD. What is the full from of A?",
+    //     answer: "Access"
     // },
     // {
-    //     question: "11. DNA?",
-    //     choices: ["A. Joint Photography Exports Group", "B. Joint Pixel Experts Group", "C. Joint Photographic Experts Group", "D. Joint Pixel Exports Group"],
-    //     answer: "C. Joint Photographic Experts Group"
+    //     question: "11. Programming language Java was developed by?",
+    //     answer: "James Gosling"
     // },
     // {
-    //     question: "12. In the context of computers. WORM is an acronym of?",
-    //     choices: ["A. Write Once. Read Many", "B. Word On. RAM Memory", "C. Word Optical. Recognition Malware", "D. Wireless Operating. Read Module"],
-    //     answer: "A. Write Once. Read Many"
+    //     question: "12. _______ is a software program that travels the web locating and indexing websites for search engines",
+    //     answer: "Spider"
     // },
     // {
-    //     question: "13. VOIP?",
-    //     choices: ["A. Primary read-only memory", "B. Programmable read-only memory", "C. Program read-output memory ", "D. Program read-only memory"],
-    //     answer: "B. Programmable read-only memory"
+    //     question: "13. A program that infects other programs by modifying them is known as?",
+    //     answer: "Virus"
     // },
     // {
-    //     question: "14. Yahoo?",
+    //     question: "14. ______ allots memory for each program and frees memory when it is no longer needed for a program",
     //     choices: ["A. Switch mode Transfer Programming", "B. Switch mode Transfer Protocol ", "C. Simple Mail Transfer Prortocol", "D. Simple Main Transfer Prortocol"],
-    //     answer: "C. Simple Mail Transfer Prortocol"
+    //     answer: "Operating System"
     // }
     // ,
     // {
-    //     question: "15. MDI stands for ______?",
-    //     choices: ["A. Multiple Document Interface", "B. Multiple Design Interface", "C. Multiple Design Interaction", "D. Multiple Document Interaction"],
-    //     answer: "A. Multiple Document Interface"
+    //     question: "15. The software tools that enable a user to interact with a computer for specific purposes are known as?",
+    //     answer: "ApplicationsA. Multiple Document Interface"
     // }
 ];
 

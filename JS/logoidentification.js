@@ -21,25 +21,65 @@ const timeoutSound = document.querySelector("#timeoutSound")
 // Make an array of objects that stores question, choices of question and answer
 const quiz = [
     {
-        question: "../Logo Presentation/Slide2.jpeg",
-        answer: "C. James T. Russell"
+        question: "../Logo Images/Pic1-VIMEO.jpg",
+        answer: "Vimeo"
     },
     {
-        question: "../Logo Presentation/Slide3.jpeg",
-        answer: "C. James T. Russell"
+        question: "../Logo Images/Pic2-REDDIT.jpg",
+        answer: "Reddit"
     },
     {
-        question: "../Logo Presentation/Slide4.jpeg",
-        answer: "C. James T. Russell"
+        question: "../Logo Images/Pic3-EBAY.jpg",
+        answer: "ebay"
     },
-    {
-        question: "../Logo Presentation/Slide5.jpeg",
-        answer: "C. James T. Russell"
-    },
-    {
-        question: "../Logo Presentation/Slide6.jpeg",
-        answer: "C. James T. Russell"
-    }
+    // {
+    //     question: "../Logo Images/Pic4-TEXAS INSTRUMENTS.jpg",
+    //     answer: "Texas Instruments"
+    // },
+    // {
+    //     question: "../Logo Images/Pic5-CISCO.jpg",
+    //     answer: "Cisco"
+    // },
+    // {
+    //     question: "../Logo Images/Pic6-CANON.jpg",
+    //     answer: "Canon"
+    // },
+    // {
+    //     question: "../Logo Images/Pic7-WIKIPEDIA.jpg",
+    //     answer: "Wikipedia"
+    // },
+    // {
+    //     question: "../Logo Images/Pic8-JVC.jpg",
+    //     answer: "JVC"
+    // },
+    // {
+    //     question: "../Logo Images/Pic9-TUMBLR.jpg",
+    //     answer: "tumblr"
+    // },
+    // {
+    //     question: "../Logo Images/Pic10-ATARI.jpg",
+    //     answer: "ATARI"
+    // },
+    // {
+    //     question: "../Logo Images/Pic11-DELL.jpg",
+    //     answer: "DELL"
+    // },
+    // {
+    //     question: "../Logo Images/Pic12-NVIDIA.jpg",
+    //     answer: "NVIDIA"
+    // },
+    // {
+    //     question: "../Logo Images/Pic13-XEROX.jpg",
+    //     answer: "XEROX"
+    // },
+    // {
+    //     question: "../Logo Images/Pic14-HUAWEI.jpg",
+    //     answer: "HUAWEI"
+    // },
+    // {
+    //     question: "../Logo Images/Pic15-ADOBE.jpg",
+    //     answer: "ADOBE"
+    // }
 ];
 
 // Making Variables
@@ -145,8 +185,8 @@ const stopTimer = () =>{
 
 document.addEventListener("keyup", (event) => {
     if (event.key=="j") {
-        displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+        // displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
         wrong.play()
-        checkAnswer();
+        // checkAnswer();
     }
   });
