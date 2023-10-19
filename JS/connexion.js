@@ -21,64 +21,64 @@ const timeoutSound = document.querySelector("#timeoutSound")
 // Make an array of objects that stores question, choices of question and answer
 const quiz = [
     {
-        question: "../Logo Images/Pic1-VIMEO.jpg",
-        answer: "Vimeo"
+        question: "../Connexions Images/Pic1-Graphics Card.jpg",
+        answer: "Graphics Card"
     },
     {
-        question: "../Logo Images/Pic2-REDDIT.jpg",
-        answer: "Reddit"
+        question: "../Connexions Images/Pic2-Block Chain.jpg",
+        answer: "Block Chain"
     },
     {
-        question: "../Logo Images/Pic3-EBAY.jpg",
-        answer: "ebay"
+        question: "../Connexions Images/Pic3-Binary Tree.jpg",
+        answer: "Binary Tree"
     },
     // {
-    //     question: "../Logo Images/Pic4-TEXAS INSTRUMENTS.jpg",
-    //     answer: "Texas Instruments"
+    //     question: "../Connexions Images/Pic4-Computer Architecture.jpg",
+    //     answer: "Computer Architecture"
     // },
     // {
-    //     question: "../Logo Images/Pic5-CISCO.jpg",
-    //     answer: "Cisco"
+    //     question: "../Connexions Images/Pic5-Web Server.jpg",
+    //     answer: "Web Server"
     // },
     // {
-    //     question: "../Logo Images/Pic6-CANON.jpg",
-    //     answer: "Canon"
+    //     question: "../Connexions Images/Pic6-Cache Memory.jpg",
+    //     answer: "Cache Memory"
     // },
     // {
-    //     question: "../Logo Images/Pic7-WIKIPEDIA.jpg",
-    //     answer: "Wikipedia"
+    //     question: "../Connexions Images/Pic7-Neural Network.jpg",
+    //     answer: "Neural Network"
     // },
     // {
-    //     question: "../Logo Images/Pic8-JVC.jpg",
-    //     answer: "JVC"
+    //     question: "../Connexions Images/Pic8-Dark Web.jpg",
+    //     answer: "Dark Web"
     // },
     // {
-    //     question: "../Logo Images/Pic9-TUMBLR.jpg",
-    //     answer: "tumblr"
+    //     question: "../Connexions Images/Pic9-Deep learning.jpg",
+    //     answer: "Deep learning"
     // },
     // {
-    //     question: "../Logo Images/Pic10-ATARI.jpg",
-    //     answer: "ATARI"
+    //     question: "../Connexions Images/Pic10-Heap Sort.jpg",
+    //     answer: "Heap Sort"
     // },
     // {
-    //     question: "../Logo Images/Pic11-DELL.jpg",
-    //     answer: "DELL"
+    //     question: "../Connexions Images/Pic11-Phishing.jpg",
+    //     answer: "Phishing"
     // },
     // {
-    //     question: "../Logo Images/Pic12-NVIDIA.jpg",
-    //     answer: "NVIDIA"
+    //     question: "../Connexions Images/Pic12-Num Py.jpg",
+    //     answer: "Num Py"
     // },
     // {
-    //     question: "../Logo Images/Pic13-XEROX.jpg",
-    //     answer: "XEROX"
+    //     question: "../Connexions Images/Pic13-Hash Map.jpg",
+    //     answer: "Hash Map.jpg"
     // },
     // {
-    //     question: "../Logo Images/Pic14-HUAWEI.jpg",
-    //     answer: "HUAWEI"
+    //     question: "../Connexions Images/Pic14-Mongo DB.jpg",
+    //     answer: "Mongo DB"
     // },
     // {
-    //     question: "../Logo Images/Pic15-ADOBE.jpg",
-    //     answer: "ADOBE"
+    //     question: "../Connexions Images/Pic15-Dot Net.jpg",
+    //     answer: "Dot Net"
     // }
 ];
 
