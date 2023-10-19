@@ -36,67 +36,67 @@ const quiz = [
         choices: ["A. Serial Dynamic RAM", "B. Straight Dynamic RAM", "C. Surface Dynamic RAM", "D. Synchronous Dynamic RAM"],
         answer: "Synchronous Dynamic RAM"
     },
-    // {
-    //     question: "4. GIS?",
-    //     choices: ["A. Geographical International Studies", "B. Geographical Information Systems", "C. Global Institute for Soils", "D. Global Information Statistics"],
-    //     answer: "Geographical Information Systems"
-    // },
-    // {
-    //     question: "5. SNOBOL?",
-    //     choices: ["A. Student Query Line", "B. Structured Question List", "C.Straight Query Language", "D. Structured Query Language"],
-    //     answer: "Structured Query Language"
-    // },
-    // {
-    //     question: "6. RIP?",
-    //     choices: ["A. Downloading", "B. Uploading", "C. FTP", "D. JPEG"],
-    //     answer: "Downloading"
-    // },
-    // {
-    //     question: "7. SNAP?",
-    //     choices: ["Common Basic Operating Language", "B. Computer Basic Oriented Language", "C. Computer Based Operating Language", "D. Common Business Oriented Language"],
-    //     answer: "D. Common Business Oriented Language"
-    // },
-    // {
-    //     question: "8. DOC?",
-    //     choices: ["A. Printable New Graphic", "B. Printable New Graphical", "C. Port Natural Graphics", "D. Portable Network Graphics"],
-    //     answer: "Portable Network Graphics"
-    // },
-    // {
-    //     question: "9. HSDPA?",
-    //     choices: ["A. TCP/IP", "B. UDP", "C. FTP", "D. www"],
-    //     answer: "TCP/IP"
-    // },
-    // {
-    //     question: "10. LLL?",
-    //     choices: ["A. Primary", "B. Secondary", "C. Tertiary", "D. None of the above"],
-    //     answer: "Secondary"
-    // },
-    // {
-    //     question: "11. DNA?",
-    //     choices: ["A. Joint Photography Exports Group", "B. Joint Pixel Experts Group", "C. Joint Photographic Experts Group", "D. Joint Pixel Exports Group"],
-    //     answer: "Joint Photographic Experts Group"
-    // },
-    // {
-    //     question: "12. In the context of computers. WORM is an acronym of?",
-    //     choices: ["A. Write Once. Read Many", "B. Word On. RAM Memory", "C. Word Optical. Recognition Malware", "D. Wireless Operating. Read Module"],
-    //     answer: "Write Once. Read Many"
-    // },
-    // {
-    //     question: "13. VOIP?",
-    //     choices: ["A. Primary read-only memory", "B. Programmable read-only memory", "C. Program read-output memory ", "D. Program read-only memory"],
-    //     answer: "Programmable read-only memory"
-    // },
-    // {
-    //     question: "14. Yahoo?",
-    //     choices: ["A. Switch mode Transfer Programming", "B. Switch mode Transfer Protocol ", "C. Simple Mail Transfer Prortocol", "D. Simple Main Transfer Prortocol"],
-    //     answer: "Simple Mail Transfer Prortocol"
-    // }
-    // ,
-    // {
-    //     question: "15. MDI stands for ______?",
-    //     choices: ["A. Multiple Document Interface", "B. Multiple Design Interface", "C. Multiple Design Interaction", "D. Multiple Document Interaction"],
-    //     answer: "Multiple Document Interface"
-    // }
+    {
+        question: "4. GIS?",
+        choices: ["A. Geographical International Studies", "B. Geographical Information Systems", "C. Global Institute for Soils", "D. Global Information Statistics"],
+        answer: "Geographical Information Systems"
+    },
+    {
+        question: "5. SNOBOL?",
+        choices: ["A. Student Query Line", "B. Structured Question List", "C.Straight Query Language", "D. Structured Query Language"],
+        answer: "Structured Query Language"
+    },
+    {
+        question: "6. RIP?",
+        choices: ["A. Downloading", "B. Uploading", "C. FTP", "D. JPEG"],
+        answer: "Downloading"
+    },
+    {
+        question: "7. SNAP?",
+        choices: ["Common Basic Operating Language", "B. Computer Basic Oriented Language", "C. Computer Based Operating Language", "D. Common Business Oriented Language"],
+        answer: "D. Common Business Oriented Language"
+    },
+    {
+        question: "8. DOC?",
+        choices: ["A. Printable New Graphic", "B. Printable New Graphical", "C. Port Natural Graphics", "D. Portable Network Graphics"],
+        answer: "Portable Network Graphics"
+    },
+    {
+        question: "9. HSDPA?",
+        choices: ["A. TCP/IP", "B. UDP", "C. FTP", "D. www"],
+        answer: "TCP/IP"
+    },
+    {
+        question: "10. LLL?",
+        choices: ["A. Primary", "B. Secondary", "C. Tertiary", "D. None of the above"],
+        answer: "Secondary"
+    },
+    {
+        question: "11. DNA?",
+        choices: ["A. Joint Photography Exports Group", "B. Joint Pixel Experts Group", "C. Joint Photographic Experts Group", "D. Joint Pixel Exports Group"],
+        answer: "Joint Photographic Experts Group"
+    },
+    {
+        question: "12. In the context of computers. WORM is an acronym of?",
+        choices: ["A. Write Once. Read Many", "B. Word On. RAM Memory", "C. Word Optical. Recognition Malware", "D. Wireless Operating. Read Module"],
+        answer: "Write Once. Read Many"
+    },
+    {
+        question: "13. VOIP?",
+        choices: ["A. Primary read-only memory", "B. Programmable read-only memory", "C. Program read-output memory ", "D. Program read-only memory"],
+        answer: "Programmable read-only memory"
+    },
+    {
+        question: "14. Yahoo?",
+        choices: ["A. Switch mode Transfer Programming", "B. Switch mode Transfer Protocol ", "C. Simple Mail Transfer Prortocol", "D. Simple Main Transfer Prortocol"],
+        answer: "Simple Mail Transfer Prortocol"
+    }
+    ,
+    {
+        question: "15. MDI stands for ______?",
+        choices: ["A. Multiple Document Interface", "B. Multiple Design Interface", "C. Multiple Design Interaction", "D. Multiple Document Interaction"],
+        answer: "Multiple Document Interface"
+    }
 ];
 
 // Making Variables
@@ -128,27 +128,6 @@ const startQuiz = () => {
 const showQuestions = () => {
     const questionDetails = quiz[currentQuestionIndex];
     questionBox.textContent = questionDetails.question;
-
-    // choicesBox.textContent = "";
-    // for (let i = 0; i < questionDetails.choices.length; i++) {
-        // const choiceDiv = document.createElement('div');
-        // choiceDiv.textContent = currentChoice;
-        // choiceDiv.classList.add('choice');
-        // choicesBox.appendChild(choiceDiv);
-
-        // choiceDiv.addEventListener('click', () => {
-        //     if (choiceDiv.classList.contains('selected')) {
-        //         choiceDiv.classList.remove('selected');
-        //     }
-        //     else {
-        //         choiceDiv.classList.add('selected');
-        //             const selectedChoice = document.querySelector('.choice.selected');                         // SAM
-        //             if (selectedChoice) {
-        //                 checkAnswer()
-        //             }
-        //     }
-        // });
-    // }
     
     if(currentQuestionIndex < quiz.length){                                                                 // SAM
         startTimer();
@@ -243,8 +222,9 @@ const stopTimer = () =>{
 
 document.addEventListener("keyup", (event) => {
     if (event.key=="j") {
-        displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+        // displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
         wrong.play()
-        checkAnswer();
+        // checkAnswer();
+        console.log(event.key)
     }
   });

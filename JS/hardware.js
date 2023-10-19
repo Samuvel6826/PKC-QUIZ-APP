@@ -33,55 +33,55 @@ const quiz = [
         question: "3. What could cause a fixed disk error?",
         answer: "Incorrect CMOS settings"
     },
-    // {
-    //     question: "4. Missing slot covers on a computer can cause?",
-    //     answer: "over heat"
-    // },
-    // {
-    //     question: "5. With respect to a network interface card, the term 10/100 refers to?",
-    //     answer: "megabits per seconds"
-    // },
-    // {
-    //     question: "6. Which Motherboard form factor uses one 20 pin connector?",
-    //     answer: "ATX"
-    // },
-    // {
-    //     question: "7. A hard disk is divided into tracks which are further subdivided into:?",
-    //     answer: "sectors"
-    // },
-    // {
-    //     question: "8. During preventative maintenance on a dot matrix printer, do NOT lubricate:?",
-    //     answer: "Print head pins"
-    // },
-    // {
-    //     question: "9. Which component is responsible for storing data and programs on a computer?",
-    //     answer: "HDD (Hard Disk Drive)"
-    // },
-    // {
-    //     question: "10. : Which hardware component is responsible for providing power to all other components in a computer?",
-    //     answer: "PSU (Power Supply Unit)"
-    // },
-    // {
-    //     question: "11. What type of storage device has no moving parts and is known for its speed and durability?",
-    //     answer: "SSD (Solid State Drive)"
-    // },
-    // {
-    //     question: "12. Which component controls the communication between the CPU and other hardware components?",
-    //     answer: "Motherboard"
-    // },
-    // {
-    //     question: "13. What is the function of a sound card in a computer?",
-    //     answer: " Providing audio output"
-    // },
-    // {
-    //     question: "14. What is the standard interface used to connect external devices to a computer, such as a keyboard or mouse?",
-    //     answer: "USB (Universal Serial Bus)"
-    // }
-    // ,
-    // {
-    //     question: "15. What is the function of a network card (NIC) in a computer?",
-    //     answer: "Managing network connections"
-    // }
+    {
+        question: "4. Missing slot covers on a computer can cause?",
+        answer: "over heat"
+    },
+    {
+        question: "5. With respect to a network interface card, the term 10/100 refers to?",
+        answer: "megabits per seconds"
+    },
+    {
+        question: "6. Which Motherboard form factor uses one 20 pin connector?",
+        answer: "ATX"
+    },
+    {
+        question: "7. A hard disk is divided into tracks which are further subdivided into:?",
+        answer: "sectors"
+    },
+    {
+        question: "8. During preventative maintenance on a dot matrix printer, do NOT lubricate:?",
+        answer: "Print head pins"
+    },
+    {
+        question: "9. Which component is responsible for storing data and programs on a computer?",
+        answer: "HDD (Hard Disk Drive)"
+    },
+    {
+        question: "10. : Which hardware component is responsible for providing power to all other components in a computer?",
+        answer: "PSU (Power Supply Unit)"
+    },
+    {
+        question: "11. What type of storage device has no moving parts and is known for its speed and durability?",
+        answer: "SSD (Solid State Drive)"
+    },
+    {
+        question: "12. Which component controls the communication between the CPU and other hardware components?",
+        answer: "Motherboard"
+    },
+    {
+        question: "13. What is the function of a sound card in a computer?",
+        answer: " Providing audio output"
+    },
+    {
+        question: "14. What is the standard interface used to connect external devices to a computer, such as a keyboard or mouse?",
+        answer: "USB (Universal Serial Bus)"
+    }
+    ,
+    {
+        question: "15. What is the function of a network card (NIC) in a computer?",
+        answer: "Managing network connections"
+    }
 ];
 
 // Making Variables
@@ -228,8 +228,9 @@ const stopTimer = () =>{
 
 document.addEventListener("keyup", (event) => {
     if (event.key=="j") {
-        displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+        // displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
         wrong.play()
-        checkAnswer();
+        // checkAnswer();
+        console.log(event.key)
     }
   });

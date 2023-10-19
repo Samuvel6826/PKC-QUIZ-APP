@@ -33,56 +33,56 @@ const quiz = [
         question: "3. Some software packages attempt to encode the knowledge and decision rules of human specialists in order to use them for making their own decisions. By what name are such packages known?",
         answer: "Expert system"
     },
-    // {
-    //     question: "4. ______ is a malicious program that executes when a certain criterion is met or a certain file is accessed or when a certain key combination is pressed?",
-    //     answer: "Logic Bomb"
-    // },
-    // {
-    //     question: "5. A software which is freely available on the internet for users and with source code for enabling further enhancements by developers is called",
-    //     answer: "Open Source Software"
-    // },
-    // {
-    //     question: "6. What is the name of the software system which combines many independent functions into one packages?",
-    //     answer: "Integrated System"
-    // },
-    // {
-    //     question: "7. Program which is readily available for computer users as a part of software package is classified as?",
-    //     answer: "Library Program"
-    // },
-    // {
-    //     question: "8. Function of running and loading programs by use of peripherals is function of?",
-    //     answer: "Operating System"
-    // },
-    // {
-    //     question: "9. _____ is the fraudulant act of acquiring private and sensitive information. Such as credit card numbers, personal identification and account usernames and passwords?",
-    //     answer: "Pishing"
-    // },
-    // {
-    //     question: "10. In DASD. What is the full from of A?",
-    //     answer: "Access"
-    // },
-    // {
-    //     question: "11. Programming language Java was developed by?",
-    //     answer: "James Gosling"
-    // },
-    // {
-    //     question: "12. _______ is a software program that travels the web locating and indexing websites for search engines",
-    //     answer: "Spider"
-    // },
-    // {
-    //     question: "13. A program that infects other programs by modifying them is known as?",
-    //     answer: "Virus"
-    // },
-    // {
-    //     question: "14. ______ allots memory for each program and frees memory when it is no longer needed for a program",
-    //     choices: ["A. Switch mode Transfer Programming", "B. Switch mode Transfer Protocol ", "C. Simple Mail Transfer Prortocol", "D. Simple Main Transfer Prortocol"],
-    //     answer: "Operating System"
-    // }
-    // ,
-    // {
-    //     question: "15. The software tools that enable a user to interact with a computer for specific purposes are known as?",
-    //     answer: "ApplicationsA. Multiple Document Interface"
-    // }
+    {
+        question: "4. ______ is a malicious program that executes when a certain criterion is met or a certain file is accessed or when a certain key combination is pressed?",
+        answer: "Logic Bomb"
+    },
+    {
+        question: "5. A software which is freely available on the internet for users and with source code for enabling further enhancements by developers is called",
+        answer: "Open Source Software"
+    },
+    {
+        question: "6. What is the name of the software system which combines many independent functions into one packages?",
+        answer: "Integrated System"
+    },
+    {
+        question: "7. Program which is readily available for computer users as a part of software package is classified as?",
+        answer: "Library Program"
+    },
+    {
+        question: "8. Function of running and loading programs by use of peripherals is function of?",
+        answer: "Operating System"
+    },
+    {
+        question: "9. _____ is the fraudulant act of acquiring private and sensitive information. Such as credit card numbers, personal identification and account usernames and passwords?",
+        answer: "Pishing"
+    },
+    {
+        question: "10. In DASD. What is the full from of A?",
+        answer: "Access"
+    },
+    {
+        question: "11. Programming language Java was developed by?",
+        answer: "James Gosling"
+    },
+    {
+        question: "12. _______ is a software program that travels the web locating and indexing websites for search engines",
+        answer: "Spider"
+    },
+    {
+        question: "13. A program that infects other programs by modifying them is known as?",
+        answer: "Virus"
+    },
+    {
+        question: "14. ______ allots memory for each program and frees memory when it is no longer needed for a program",
+        choices: ["A. Switch mode Transfer Programming", "B. Switch mode Transfer Protocol ", "C. Simple Mail Transfer Prortocol", "D. Simple Main Transfer Prortocol"],
+        answer: "Operating System"
+    }
+    ,
+    {
+        question: "15. The software tools that enable a user to interact with a computer for specific purposes are known as?",
+        answer: "ApplicationsA. Multiple Document Interface"
+    }
 ];
 
 // Making Variables
@@ -229,8 +229,9 @@ const stopTimer = () =>{
 
 document.addEventListener("keyup", (event) => {
     if (event.key=="j") {
-        displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+        // displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
         wrong.play()
-        checkAnswer();
+        // checkAnswer();
+        console.log(event.key)
     }
   });

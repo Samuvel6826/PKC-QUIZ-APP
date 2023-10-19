@@ -32,54 +32,54 @@ const quiz = [
         question: "../Connexions Images/Pic3-Binary Tree.jpg",
         answer: "Binary Tree"
     },
-    // {
-    //     question: "../Connexions Images/Pic4-Computer Architecture.jpg",
-    //     answer: "Computer Architecture"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic5-Web Server.jpg",
-    //     answer: "Web Server"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic6-Cache Memory.jpg",
-    //     answer: "Cache Memory"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic7-Neural Network.jpg",
-    //     answer: "Neural Network"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic8-Dark Web.jpg",
-    //     answer: "Dark Web"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic9-Deep learning.jpg",
-    //     answer: "Deep learning"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic10-Heap Sort.jpg",
-    //     answer: "Heap Sort"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic11-Phishing.jpg",
-    //     answer: "Phishing"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic12-Num Py.jpg",
-    //     answer: "Num Py"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic13-Hash Map.jpg",
-    //     answer: "Hash Map.jpg"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic14-Mongo DB.jpg",
-    //     answer: "Mongo DB"
-    // },
-    // {
-    //     question: "../Connexions Images/Pic15-Dot Net.jpg",
-    //     answer: "Dot Net"
-    // }
+    {
+        question: "../Connexions Images/Pic4-Computer Architecture.jpg",
+        answer: "Computer Architecture"
+    },
+    {
+        question: "../Connexions Images/Pic5-Web Server.jpg",
+        answer: "Web Server"
+    },
+    {
+        question: "../Connexions Images/Pic6-Cache Memory.jpg",
+        answer: "Cache Memory"
+    },
+    {
+        question: "../Connexions Images/Pic7-Neural Network.jpg",
+        answer: "Neural Network"
+    },
+    {
+        question: "../Connexions Images/Pic8-Dark Web.jpg",
+        answer: "Dark Web"
+    },
+    {
+        question: "../Connexions Images/Pic9-Deep learning.jpg",
+        answer: "Deep learning"
+    },
+    {
+        question: "../Connexions Images/Pic10-Heap Sort.jpg",
+        answer: "Heap Sort"
+    },
+    {
+        question: "../Connexions Images/Pic11-Phishing.jpg",
+        answer: "Phishing"
+    },
+    {
+        question: "../Connexions Images/Pic12-Num Py.jpg",
+        answer: "Num Py"
+    },
+    {
+        question: "../Connexions Images/Pic13-Hash Map.jpg",
+        answer: "Hash Map.jpg"
+    },
+    {
+        question: "../Connexions Images/Pic14-Mongo DB.jpg",
+        answer: "Mongo DB"
+    },
+    {
+        question: "../Connexions Images/Pic15-Dot Net.jpg",
+        answer: "Dot Net"
+    }
 ];
 
 // Making Variables
@@ -170,8 +170,6 @@ function startTimer() {
         if (timeLeft === 0) {
             stopTimer();                                                            // SAM 
             displayAlert("Timeout!");
-            timeoutSound.play()
-            questionBox.innerHTML = quiz[currentQuestionIndex].answer
         }
 
     }
@@ -187,6 +185,7 @@ document.addEventListener("keyup", (event) => {
     if (event.key=="j") {
         // displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
         wrong.play()
+        console.log(event.key)
         // checkAnswer();
     }
   });

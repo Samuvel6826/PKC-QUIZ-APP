@@ -11,87 +11,41 @@ const timer = document.querySelector('.timer');
 timer.style.display = "none";
 const correct = document.querySelector("#correct")
 const wrong = document.querySelector("#wrong")
+const hmbtn = document.querySelector(".homeBtn")
 
+hmbtn.addEventListener('click', () => {
+    window.location.href="../index.html"
+});
 
+const timeoutSound = document.querySelector("#timeoutSound")
 
 // Make an array of objects that stores question, choices of question and answer
 const quiz = [
     {
-        question: `1. Which company invented the first floppy disk?<br>2. Who is the father Of Computer science?<br>3. Who is the father of personal computer?`,
-        choices: ["A. Samsung", "B. Sony", "C. Dell", "D. IBM"],
-        answer: "D. IBM"
+        question: `1. What technology helps make telephone calls over the Internet possible?<br>2. Shell is the exclusive feature of?<br>3. The key combination for activating the start menu<br>4. What is IMEI?<br>5.	Who is known as the Human Computer of India?`,
+        answer: `VoIP<br>Unix<br>Ctrl+Esc<br>International Mobile Equipment Identity<br>Shakunthala Devi`
     },
     {
-        question: "2. Who is the father Of Computer science?",
-        choices: ["A.Allen Turing"],
-        answer: "A.Allen Turing"
+        question: `1. Email was developed by......?<br>2. What is the expanded form of CMOS?<br>3.	In which year Microsoft Office was launched<br>4. The keyboard shortcut to Open the properties window for the selected icon or program<br>5. Tic-Tac-Toe is a 
+        First?`,
+        answer: `Raymond Samuel Tomlinson (Ray Tomlinson)<br>Complementary Metal Oxide Semoconductor<br>1989<br>Alt + Enter<br>graphical game`
     },
     {
-        question: "3. Who is the father of personal computer?",
-        choices: ["A. Edward Robert"],
-        answer: "A. Edward Robert"
+        question: `1. Which IT company's nickname is ' The Big Blue '?<br>2. J2EE stands for?<br>3.	Function key used to renaming the selected icon<br>4. The printing speed is around ___ characters per second in dot matrix printer.<br>5. The Backbone of the computer ?`,
+        answer: `IBM<br>Java 2 Platform Enterprise Edition<br>F2<br>3000<br>Mother Board`
     },
     {
-        question: "4. Who invented Compact Disc?",
-        choices: ["A. Fujio Masuoka", "B. Thomas Edison", "C. James T. Russell", "D. Martin Cooper"],
-        answer: "C. James T. Russell"
+        question: `1. function key to take a screenshot of the current page ' The Big Blue '?<br>2. Central Processing Unit in a computer consists of which major components?<br>3.	A computer program that functions as an intermediary between a computer user and the computer hardware is called?<br>4. Python allows using the popular data interchange format called JSON. What does JSON stand for?<br>5. Which of the following is NOT a text editor used for programming?`,
+        answer: `Alt+print Screen<br>ALU, Control Unit, and Registers<br>operating system<br>JavaScript Object Notation<br>Rocket`
     },
     {
-        question: `5. Who invented the high level language"C"?`,
-        choices: ["A. Dennis M. Ritchie"],
-        answer: "A. Dennis M. Ritchie"
+        question: `1. Which among the following is the fastest memory in a computer that holds information?' The Big Blue '?<br>2. The process of finding errors/defects/bugs in the software program is called?<br>3.	Which of the following is the correct full form of JPEG?<br>4. The first mechanical calculator was called ______?<br>5. In MS-Excel, which of the following keyboard shortcuts is used to select the current and next sheet(s) in a worksheet?`,
+        answer: `Register<br>Testing<br>Joint Photographic Experts Group<br>Pascaline<br>Ctrl + Shift + Page Down`
     },
-    // {
-    //     question: "6. What was the invention of Gene Dolgoff?",
-    //     choices: ["A. LCD television", "B. LCD projector", "C. LCD Printer", "D. LCD"],
-    //     answer: "B. LCD projector"
-    // },
-    // {
-    //     question: "7. Who invented Compact Disc?",
-    //     choices: ["A. James T. Russell", "B. Fujio Masuoka", "C. Thomas Edison", "D. Martin Cooper"],
-    //     answer: "A. James T. Russell"
-    // },
-    // {
-    //     question: "8. Who invented the first 3D printer?",
-    //     choices: ["A. Nick Holonyak", "B. Lord Kelvin", "C. Johannes Gutenberg", "D. Chuck Hull"],
-    //     answer: "D. Chuck Hull"
-    // },
-    // {
-    //     question: "9. What was the invention of Norman Joseph Woodland?",
-    //     choices: ["A. QR code", "B. Genetic code", "C. Morse code", "D. Barcode"],
-    //     answer: "D. Barcode"
-    // },
-    // {
-    //     question: "10. Who invented the computer mouse?",
-    //     choices: ["A. Alan Kay", "B. Tim Berners-Lee", "C. Ivan Sutherland", "D. Doulas Engelbart"],
-    //     answer: "D. Doulas Engelbart"
-    // },
-    // {
-    //     question: `11. Who is considered the “father of computer science”?`,                               // chg
-    //     choices: ["A. Alan Turing", "B. Charles Babbage", "C. John von Neumann", "D. Tim Berners-Lee"],
-    //     answer: "A. Alan Turing"
-    // },
-    // {
-    //     question: "12. What was the first programmable mechanical computer?",
-    //     choices: ["A. ENIAC", "B. UNIVAC I", "C. Analytical Engine", "D. Z3"],
-    //     answer: "C. Analytical Engine"
-    // },
-    // {
-    //     question: "13. When was the first electronic digital computer, ENIAC, completed?",
-    //     choices: ["A. 1936 ", "B. 1945", "C. 1951 ", "D. 1960"],
-    //     answer: "B. 1945"
-    // },
-    // {
-    //     question: "14. Who co-invented the first high-level programming language, Fortran?",
-    //     choices: ["A. Alan Turing ", "B. Grace Hopper ", "C. John Backus", "D. John von Neumann"],
-    //     answer: "C. John Backus"
-    // }
-    // ,
-    // {
-    //     question: "15. In Which year was the first message sent over the ARPANET, the precursor to the internet?",
-    //     choices: ["A. 1957", "B. 1969", "C. 1976", "D. 1983"],
-    //     answer: "B. 1969"
-    // }
+    {
+        question: `1. A device provides surge protection and battery backup power during a power outage?' The Big Blue '?<br>2. In terms of network what is meaning of SAP?<br>3.	To close a selected drop-down list; cancel a command and close a dialog box use_____?<br>4. 3.	What is full form of BMP ?<br>5. 2.	Application software is developed to accomplish?`,
+        answer: `UPS<br>Service Access Point<br>ESC KEY<br>Bit map<br>real-world tasks`
+    },
 ];
 
 // Making Variables
@@ -180,6 +134,7 @@ function startTimer() {
             stopTimer();
             questionBox.innerHTML = ""                                                        
             displayAlert("Timeout!");
+            timeoutSound.play()
             startTimer2()
         }
 
@@ -199,6 +154,7 @@ function startTimer2() {
         if (timeLeft2 === 0) {
             stopTimer();
             displayAlert("Timeout!");
+            timeoutSound.play()
             confirm("VIEW ANWSER?")
             if (confirm = true) {
                 questionBox.innerHTML = quiz[currentQuestionIndex].answer

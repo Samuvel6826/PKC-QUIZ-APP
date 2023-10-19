@@ -16,8 +16,6 @@ hmbtn.addEventListener('click', () => {
     window.location.href="../index.html"
 });
 
-const timeoutSound = document.querySelector("#timeoutSound")
-
 // Make an array of objects that stores question, choices of question and answer
 const quiz = [
     {
@@ -32,54 +30,54 @@ const quiz = [
         question: "../Logo Images/Pic3-EBAY.jpg",
         answer: "ebay"
     },
-    // {
-    //     question: "../Logo Images/Pic4-TEXAS INSTRUMENTS.jpg",
-    //     answer: "Texas Instruments"
-    // },
-    // {
-    //     question: "../Logo Images/Pic5-CISCO.jpg",
-    //     answer: "Cisco"
-    // },
-    // {
-    //     question: "../Logo Images/Pic6-CANON.jpg",
-    //     answer: "Canon"
-    // },
-    // {
-    //     question: "../Logo Images/Pic7-WIKIPEDIA.jpg",
-    //     answer: "Wikipedia"
-    // },
-    // {
-    //     question: "../Logo Images/Pic8-JVC.jpg",
-    //     answer: "JVC"
-    // },
-    // {
-    //     question: "../Logo Images/Pic9-TUMBLR.jpg",
-    //     answer: "tumblr"
-    // },
-    // {
-    //     question: "../Logo Images/Pic10-ATARI.jpg",
-    //     answer: "ATARI"
-    // },
-    // {
-    //     question: "../Logo Images/Pic11-DELL.jpg",
-    //     answer: "DELL"
-    // },
-    // {
-    //     question: "../Logo Images/Pic12-NVIDIA.jpg",
-    //     answer: "NVIDIA"
-    // },
-    // {
-    //     question: "../Logo Images/Pic13-XEROX.jpg",
-    //     answer: "XEROX"
-    // },
-    // {
-    //     question: "../Logo Images/Pic14-HUAWEI.jpg",
-    //     answer: "HUAWEI"
-    // },
-    // {
-    //     question: "../Logo Images/Pic15-ADOBE.jpg",
-    //     answer: "ADOBE"
-    // }
+    {
+        question: "../Logo Images/Pic4-TEXAS INSTRUMENTS.jpg",
+        answer: "Texas Instruments"
+    },
+    {
+        question: "../Logo Images/Pic5-CISCO.jpg",
+        answer: "Cisco"
+    },
+    {
+        question: "../Logo Images/Pic6-CANON.jpg",
+        answer: "Canon"
+    },
+    {
+        question: "../Logo Images/Pic7-WIKIPEDIA.jpg",
+        answer: "Wikipedia"
+    },
+    {
+        question: "../Logo Images/Pic8-JVC.jpg",
+        answer: "JVC"
+    },
+    {
+        question: "../Logo Images/Pic9-TUMBLR.jpg",
+        answer: "tumblr"
+    },
+    {
+        question: "../Logo Images/Pic10-ATARI.jpg",
+        answer: "ATARI"
+    },
+    {
+        question: "../Logo Images/Pic11-DELL.jpg",
+        answer: "DELL"
+    },
+    {
+        question: "../Logo Images/Pic12-NVIDIA.jpg",
+        answer: "NVIDIA"
+    },
+    {
+        question: "../Logo Images/Pic13-XEROX.jpg",
+        answer: "XEROX"
+    },
+    {
+        question: "../Logo Images/Pic14-HUAWEI.jpg",
+        answer: "HUAWEI"
+    },
+    {
+        question: "../Logo Images/Pic15-ADOBE.jpg",
+        answer: "ADOBE"
+    }
 ];
 
 // Making Variables
@@ -112,7 +110,7 @@ const showQuestions = () => {
     picture.setAttribute("src", questionDetails.question)
     
     if(currentQuestionIndex < quiz.length){                   
-        timeLeft = 15;                                              // SAM
+                                                 // SAM
         startTimer();
     }
 
@@ -124,16 +122,15 @@ nextBtn.addEventListener('click', () => {
     }
     else {
          checkAnswer();
-         
     }
 });
 
 // Function to check answers
 const checkAnswer = () => {
+    timeLeft = 15;
     currentQuestionIndex++;
     if (currentQuestionIndex < quiz.length) {
         showQuestions();
-        
     }
     else {
         stopTimer();
@@ -170,8 +167,6 @@ function startTimer() {
         if (timeLeft === 0) {
             stopTimer();                                                            // SAM 
             displayAlert("Timeout!");
-            timeoutSound.play()
-            questionBox.innerHTML = quiz[currentQuestionIndex].answer
         }
 
     }
@@ -188,5 +183,6 @@ document.addEventListener("keyup", (event) => {
         // displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
         wrong.play()
         // checkAnswer();
+        console.log(event.key)
     }
   });

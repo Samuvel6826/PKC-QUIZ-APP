@@ -34,66 +34,66 @@ const quiz = [
         choices: ["A. Edward Robert"],
         answer: "Edward Robert"
     },
-    // {
-    //     question: "4. Who invented Compact Disc?",
-    //     choices: ["A. Fujio Masuoka", "B. Thomas Edison", "C. James T. Russell", "D. Martin Cooper"],
-    //     answer: "James T. Russell"
-    // },
-    // {
-    //     question: `5. Who invented the high level language"C"?`,
-    //     choices: ["A. Dennis M. Ritchie"],
-    //     answer: "Dennis M. Ritchie"
-    // },
-    // {
-    //     question: "6. What was the invention of Gene Dolgoff?",
-    //     choices: ["A. LCD television", "B. LCD projector", "C. LCD Printer", "D. LCD"],
-    //     answer: "LCD projector"
-    // },
-    // {
-    //     question: "7. Who invented Compact Disc?",
-    //     choices: ["A. James T. Russell", "B. Fujio Masuoka", "C. Thomas Edison", "D. Martin Cooper"],
-    //     answer: "James T. Russell"
-    // },
-    // {
-    //     question: "8. Who invented the first 3D printer?",
-    //     choices: ["A. Nick Holonyak", "B. Lord Kelvin", "C. Johannes Gutenberg", "D. Chuck Hull"],
-    //     answer: "Chuck Hull"
-    // },
-    // {
-    //     question: "9. What was the invention of Norman Joseph Woodland?",
-    //     choices: ["A. QR code", "B. Genetic code", "C. Morse code", "D. Barcode"],
-    //     answer: "Barcode"
-    // },
-    // {
-    //     question: "10. Who invented the computer mouse?",
-    //     choices: ["A. Alan Kay", "B. Tim Berners-Lee", "C. Ivan Sutherland", "D. Doulas Engelbart"],
-    //     answer: "Doulas Engelbart"
-    // },
-    // {
-    //     question: "11. Who Developed Perl programming language in 1987",                  
-    //     answer: "Larry Wall"
-    // },
-    // {
-    //     question: "12. What was the first programmable mechanical computer?",
-    //     choices: ["A. ENIAC", "B. UNIVAC I", "C. Analytical Engine", "D. Z3"],
-    //     answer: "Analytical Engine"
-    // },
-    // {
-    //     question: "13. When was the first electronic digital computer, ENIAC, completed?",
-    //     choices: ["A. 1936 ", "B. 1945", "C. 1951 ", "D. 1960"],
-    //     answer: "1945"
-    // },
-    // {
-    //     question: "14. Who co-invented the first high-level programming language, Fortran?",
-    //     choices: ["A. Alan Turing ", "B. Grace Hopper ", "C. John Backus", "D. John von Neumann"],
-    //     answer: "John Backus"
-    // }
-    // ,
-    // {
-    //     question: "15. In Which year was the first message sent over the ARPANET, the precursor to the internet?",
-    //     choices: ["A. 1957", "B. 1969", "C. 1976", "D. 1983"],
-    //     answer: "1969"
-    // }
+    {
+        question: "4. Who invented Compact Disc?",
+        choices: ["A. Fujio Masuoka", "B. Thomas Edison", "C. James T. Russell", "D. Martin Cooper"],
+        answer: "James T. Russell"
+    },
+    {
+        question: `5. Who invented the high level language"C"?`,
+        choices: ["A. Dennis M. Ritchie"],
+        answer: "Dennis M. Ritchie"
+    },
+    {
+        question: "6. What was the invention of Gene Dolgoff?",
+        choices: ["A. LCD television", "B. LCD projector", "C. LCD Printer", "D. LCD"],
+        answer: "LCD projector"
+    },
+    {
+        question: "7. Who invented Compact Disc?",
+        choices: ["A. James T. Russell", "B. Fujio Masuoka", "C. Thomas Edison", "D. Martin Cooper"],
+        answer: "James T. Russell"
+    },
+    {
+        question: "8. Who invented the first 3D printer?",
+        choices: ["A. Nick Holonyak", "B. Lord Kelvin", "C. Johannes Gutenberg", "D. Chuck Hull"],
+        answer: "Chuck Hull"
+    },
+    {
+        question: "9. What was the invention of Norman Joseph Woodland?",
+        choices: ["A. QR code", "B. Genetic code", "C. Morse code", "D. Barcode"],
+        answer: "Barcode"
+    },
+    {
+        question: "10. Who invented the computer mouse?",
+        choices: ["A. Alan Kay", "B. Tim Berners-Lee", "C. Ivan Sutherland", "D. Doulas Engelbart"],
+        answer: "Doulas Engelbart"
+    },
+    {
+        question: "11. Who Developed Perl programming language in 1987",                  
+        answer: "Larry Wall"
+    },
+    {
+        question: "12. What was the first programmable mechanical computer?",
+        choices: ["A. ENIAC", "B. UNIVAC I", "C. Analytical Engine", "D. Z3"],
+        answer: "Analytical Engine"
+    },
+    {
+        question: "13. When was the first electronic digital computer, ENIAC, completed?",
+        choices: ["A. 1936 ", "B. 1945", "C. 1951 ", "D. 1960"],
+        answer: "1945"
+    },
+    {
+        question: "14. Who co-invented the first high-level programming language, Fortran?",
+        choices: ["A. Alan Turing ", "B. Grace Hopper ", "C. John Backus", "D. John von Neumann"],
+        answer: "John Backus"
+    }
+    ,
+    {
+        question: "15. In Which year was the first message sent over the ARPANET, the precursor to the internet?",
+        choices: ["A. 1957", "B. 1969", "C. 1976", "D. 1983"],
+        answer: "1969"
+    }
     // ,
     // {
     //     question: "16. Who developed the first graphical user interface (GUI) and computer mouse?",
@@ -256,8 +256,9 @@ const stopTimer = () =>{
 
 document.addEventListener("keyup", (event) => {
     if (event.key=="j") {
-        displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
+        // displayAlert(`${quiz[currentQuestionIndex].answer} is the Correct Answer`);
         wrong.play()
-        checkAnswer();
+        // checkAnswer();
+        console.log(event.key)
     }
   });
