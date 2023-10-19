@@ -86,7 +86,7 @@ const quiz = [
 let currentQuestionIndex = 0;
 let score = 0;
 let quizOver = false;
-let timeLeft = 15;
+let timeLeft = 25;
 let timerID = null;
 
 // Adding Event Listener to Start Button
@@ -100,7 +100,7 @@ startBtn.addEventListener('click', ()=> {
 
 // Function to Start Quiz
 const startQuiz = () => {
-    timeLeft = 15;
+    timeLeft = 25;
     timer.style.display = "flex";
     currentQuestionIndex = 0;
     showQuestions();
@@ -112,7 +112,7 @@ const showQuestions = () => {
     picture.setAttribute("src", questionDetails.question)
     
     if(currentQuestionIndex < quiz.length){                   
-        timeLeft = 15;                                              // SAM
+        timeLeft = 25;                                              // SAM
         startTimer();
     }
 

@@ -51,8 +51,8 @@ const quiz = [
 // Making Variables
 let currentQuestionIndex = 0;
 let quizOver = false;
-let timeLeft = 5;
-let timeLeft2 = 15;
+let timeLeft = 30;
+let timeLeft2 = 60;
 let timerID = null;
 
 // Adding Event Listener to Start Button
@@ -66,7 +66,7 @@ startBtn.addEventListener('click', ()=> {
 
 // Function to Start Quiz
 const startQuiz = () => {
-    timeLeft = 5;
+    timeLeft = 30;
     timer.style.display = "flex";
     currentQuestionIndex = 0;
     showQuestions();
@@ -78,7 +78,7 @@ const showQuestions = () => {
     questionBox.innerHTML = questionDetails.question;
     
     if(currentQuestionIndex < quiz.length){   
-        timeLeft = 5                                                              // SAM
+        timeLeft = 30                                                              // SAM
         startTimer();
     }
 }
@@ -145,7 +145,7 @@ function startTimer() {
 // Function to Start Timer2
 function startTimer2() {
     clearInterval(timerID); // Check for any exist timers
-    timeLeft2 = 15
+    timeLeft2 = 60
     timer.textContent = timeLeft2;
 
     function countDown() {

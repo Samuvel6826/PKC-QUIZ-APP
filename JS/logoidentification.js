@@ -84,7 +84,7 @@ const quiz = [
 let currentQuestionIndex = 0;
 let score = 0;
 let quizOver = false;
-let timeLeft = 15;
+let timeLeft = 25;
 let timerID = null;
 
 // Adding Event Listener to Start Button
@@ -98,7 +98,7 @@ startBtn.addEventListener('click', ()=> {
 
 // Function to Start Quiz
 const startQuiz = () => {
-    timeLeft = 15;
+    timeLeft = 25;
     timer.style.display = "flex";
     currentQuestionIndex = 0;
     showQuestions();
@@ -127,7 +127,7 @@ nextBtn.addEventListener('click', () => {
 
 // Function to check answers
 const checkAnswer = () => {
-    timeLeft = 15;
+    timeLeft = 25;
     currentQuestionIndex++;
     if (currentQuestionIndex < quiz.length) {
         showQuestions();
