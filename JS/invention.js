@@ -202,7 +202,7 @@ nextBtn.addEventListener('click', () => {
 
 // Function to check answers
 const checkAnswer = () => {
-    timeLeft = 15;
+    timeLeft = 25;
     currentQuestionIndex++;
     if (currentQuestionIndex < quiz.length) {
         showQuestions();
