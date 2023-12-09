@@ -14,10 +14,11 @@ body {
 
 #banner {
     height: 200px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 0.5rem;
 }
 
 .pkcLogo {
@@ -26,13 +27,13 @@ body {
 
 .address {
     display: inline;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .association {
     text-align: center;
-    font-size: xx-large;
-    margin-bottom: 20px;
+    font-size: x-large;
+    margin-bottom: 10px;
 }
 
 .dubbaa {
@@ -57,7 +58,7 @@ body {
    -webkit-text-fill-color: transparent;
    animation: textclip 2s linear infinite;
    display: block;
-    font-size: 4.5rem;
+    font-size: 2rem;
     text-align: center;
 
  }
@@ -70,7 +71,7 @@ body {
 .startBtnBox {
     position: absolute;
     bottom: 50%;
-    height: 20px;
+    height: 15px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -79,7 +80,7 @@ body {
 
 .startBtn {
     text-align: center;
-    height: 100px;
+    height: 75px;
     width: 150px;
     border-radius: 100%;
     
@@ -102,7 +103,7 @@ body {
 
 .rulez {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: white;
 }
 
